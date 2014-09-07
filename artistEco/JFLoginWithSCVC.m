@@ -37,14 +37,8 @@
     
 }
 
-- (void)didReceiveMemoryWarning
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)didPressLoginButton:(UIButton *)sender {
-    
     SCLoginViewControllerCompletionHandler handler = ^(NSError *error) {
         if (SC_CANCELED(error)) {
             NSLog(@"Canceled!");
@@ -63,8 +57,14 @@
                                completionHandler:handler];
         [self presentModalViewController:loginViewController animated:YES];
     }];
-    
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 
 - (IBAction)getSCTracks:(UIButton *)sender {
     
