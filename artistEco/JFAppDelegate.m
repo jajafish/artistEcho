@@ -13,6 +13,7 @@
 #import "JFMusician.h"
 #import "JFAddJamWhereVC.h"
 #import "JFJamSession.h"
+#import "JFChoosePathVC.h"
 
 @implementation JFAppDelegate
 
@@ -32,10 +33,16 @@
     [Parse setApplicationId:@"aGteGk8MEwD1hXG8F2HkqNGxWSVIgDFf88VklyvZ"
                   clientKey:@"JdzsCvjC6w22vnvMhdXsNHSXbjU49GjfFsn8cPCy"];
     
-    // ADD JAMS
-    JFAddJamWhereVC *addJamVC = [[JFAddJamWhereVC alloc]init];
-    self.window.rootViewController = addJamVC;
     
+//    CHOOSE PATH
+    JFChoosePathVC *choosePathVC = [[JFChoosePathVC alloc]init];
+    self.window.rootViewController = choosePathVC;
+    
+    
+    // ADD JAMS
+//    JFAddJamWhereVC *addJamVC = [[JFAddJamWhereVC alloc]init];
+//    self.window.rootViewController = addJamVC;
+//    
     
     // VIEW JAMS
 //    JFJamsContainerViewController *jf = [[JFJamsContainerViewController alloc] init];
