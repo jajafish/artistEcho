@@ -15,6 +15,8 @@
 		7A7BA22B19BBF4E6000DDD4B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */; };
 		C50A387D131C420BBF72638B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E80B1A0C0184524B90CE439 /* libPods.a */; };
 		E7073D6A19BC0280006F3AF6 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7073D6919BC0280006F3AF6 /* AsyncImageView.m */; };
+		E733E41D19BC323600B9961B /* JFSignUpLogInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E733E41B19BC323600B9961B /* JFSignUpLogInVC.m */; };
+		E733E41E19BC323600B9961B /* JFSignUpLogInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E733E41C19BC323600B9961B /* JFSignUpLogInVC.xib */; };
 		E77A2B5619BC1FE800AE8FD8 /* JFMusician.m in Sources */ = {isa = PBXBuildFile; fileRef = E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */; };
 		E795B46219BC174100FD1FD1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E795B46119BC174100FD1FD1 /* Parse.framework */; };
 		E795B48519BC17F000FD1FD1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E795B48419BC17F000FD1FD1 /* Social.framework */; };
@@ -69,6 +71,9 @@
 		7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E7073D6819BC0280006F3AF6 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = AsyncImageView/AsyncImageView/AsyncImageView.h; sourceTree = SOURCE_ROOT; };
 		E7073D6919BC0280006F3AF6 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = AsyncImageView/AsyncImageView/AsyncImageView.m; sourceTree = SOURCE_ROOT; };
+		E733E41A19BC323600B9961B /* JFSignUpLogInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFSignUpLogInVC.h; sourceTree = "<group>"; };
+		E733E41B19BC323600B9961B /* JFSignUpLogInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFSignUpLogInVC.m; sourceTree = "<group>"; };
+		E733E41C19BC323600B9961B /* JFSignUpLogInVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFSignUpLogInVC.xib; sourceTree = "<group>"; };
 		E77A2B5419BC1FE800AE8FD8 /* JFMusician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMusician.h; sourceTree = "<group>"; };
 		E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMusician.m; sourceTree = "<group>"; };
 		E795B46019BC173100FD1FD1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -183,6 +188,16 @@
 			);
 			name = AsyncImageView;
 			path = "../../shared/PSHandy/AsyncImageView-master/AsyncImageView";
+			sourceTree = "<group>";
+		};
+		E733E41919BC322400B9961B /* sign up */ = {
+			isa = PBXGroup;
+			children = (
+				E733E41A19BC323600B9961B /* JFSignUpLogInVC.h */,
+				E733E41B19BC323600B9961B /* JFSignUpLogInVC.m */,
+				E733E41C19BC323600B9961B /* JFSignUpLogInVC.xib */,
+			);
+			name = "sign up";
 			sourceTree = "<group>";
 		};
 		E77A2B5219BC1FBC00AE8FD8 /* models */ = {
@@ -341,6 +356,7 @@
 		E7FDC78E19BC0D4E00080438 /* vcs */ = {
 			isa = PBXGroup;
 			children = (
+				E733E41919BC322400B9961B /* sign up */,
 				E7FDC79919BC0E4400080438 /* my tracks vc */,
 				E7FDC79819BC0DCB00080438 /* login with sc */,
 				E7FDC78F19BC0D5100080438 /* a jam */,
@@ -490,6 +506,7 @@
 				E7A0856719BBBFB300C42245 /* Images.xcassets in Resources */,
 				E7A0855919BBBFB200C42245 /* InfoPlist.strings in Resources */,
 				7A7BA21D19BBCF1E000DDD4B /* JFViewJamsVC.xib in Resources */,
+				E733E41E19BC323600B9961B /* JFSignUpLogInVC.xib in Resources */,
 				7A7BA22519BBD11C000DDD4B /* JFJamMemberCell.xib in Resources */,
 				E7A0856219BBBFB300C42245 /* Main.storyboard in Resources */,
 				E7FDC79E19BC0E5900080438 /* JFMySCTracksVC.xib in Resources */,
@@ -543,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E733E41D19BC323600B9961B /* JFSignUpLogInVC.m in Sources */,
 				E7FDC79D19BC0E5900080438 /* JFMySCTracksVC.m in Sources */,
 				E7A0855F19BBBFB200C42245 /* JFAppDelegate.m in Sources */,
 				7A7BA21C19BBCF1E000DDD4B /* JFViewJamsVC.m in Sources */,

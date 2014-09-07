@@ -8,7 +8,8 @@
 
 #import "JFLoginWithSCVC.h"
 #import "JFMySCTracksVC.h"
-#import <Parse/Parse.h>
+#import "JFMusician.h"
+#import "JFSignUpLogInVC.h"
 
 @interface JFLoginWithSCVC ()
 
@@ -31,6 +32,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
+    NSLog(@"the user is %@", [PFUser currentUser]);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -106,10 +110,6 @@
     
     [self getUserInfo];
     
-    PFObject *testObject = [PFObject objectWithClassName:@"User"];
-    testObject[@"soundcloudsong"] = @"shreddin";
-    [testObject saveInBackground];
-    
 }
 
 -(void)getUserInfo
@@ -124,14 +124,47 @@
         NSError *jsonError = nil;
         NSJSONSerialization *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 
-            
-            self.scProfile = [[NSDictionary alloc]init];
-            self.scProfile = (NSDictionary *)jsonResponse;
-            NSLog(@"here is the profile: %@", self.scProfile);
-            
-//
-//            NSLog(@"%@", response);
-//            NSLog(@"%@", jsonResponse);
+    
+        
+            NSDictionary *scResponse = [[NSDictionary alloc]init];
+            scResponse = (NSDictionary *)jsonResponse;
+        
+            NSMutableDictionary *userProfile = [[NSMutableDictionary alloc]init];
+        
+        if (scResponse[@"id"]){
+            userProfile[@"id"] = scResponse[@"id"];
+        }
+        if (scResponse[@"full_name"]){
+            userProfile[@"full_name"] = scResponse[@"full_name"];
+        }
+        if (scResponse[@"username"]){
+            userProfile[@"username"] = scResponse[@"username"];
+        }
+        if (scResponse[@"avatar_url"]){
+            userProfile[@"avatar_url"] = scResponse[@"avatar_url"];
+        }
+        if (scResponse[@"city"]){
+            userProfile[@"city"] = scResponse[@"city"];
+        }
+        if (scResponse[@"country"]){
+            userProfile[@"country"] = scResponse[@"country"];
+        }
+        if (scResponse[@"permalink"]){
+            userProfile[@"permalink"] = scResponse[@"permalink"];
+        }
+        if (scResponse[@"uri"]){
+            userProfile[@"uri"] = scResponse[@"uri"];
+        }
+        
+//        NSLog(@"the saved profile is %@", userProfile);
+        
+        JFSignUpLogInVC *signUpVC = [[JFSignUpLogInVC alloc]init];
+        signUpVC.userProfileDictionary = userProfile;
+        [self presentViewController:signUpVC animated:YES completion:nil];
+        
+//        PFObject *musician = [PFObject objectWithClassName:@"musician"];
+//        [musician setObject:userProfile forKey:@"userProfile"];
+//        [musician saveInBackground];
 
     };
     
@@ -141,11 +174,5 @@
     
 }
 
-//-(void)saveSCInfoToParseUser
-//{
-//    
-////    NSDictionary *soundcloudResults = (NSDictionary *)
-//    
-//}
 
 @end
