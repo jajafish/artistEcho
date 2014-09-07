@@ -14,7 +14,6 @@
 		7A7BA22519BBD11C000DDD4B /* JFJamMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7BA22319BBD11C000DDD4B /* JFJamMemberCell.xib */; };
 		7A7BA22B19BBF4E6000DDD4B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */; };
 		C50A387D131C420BBF72638B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E80B1A0C0184524B90CE439 /* libPods.a */; };
-		E7073D6A19BC0280006F3AF6 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7073D6919BC0280006F3AF6 /* AsyncImageView.m */; };
 		E733E41D19BC323600B9961B /* JFSignUpLogInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E733E41B19BC323600B9961B /* JFSignUpLogInVC.m */; };
 		E733E41E19BC323600B9961B /* JFSignUpLogInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E733E41C19BC323600B9961B /* JFSignUpLogInVC.xib */; };
 		E733E42319BC391C00B9961B /* JFAddJamWhereVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E733E42119BC391C00B9961B /* JFAddJamWhereVC.m */; };
@@ -23,6 +22,7 @@
 		E733E42B19BC393800B9961B /* JFAddJamWhenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E733E42919BC393800B9961B /* JFAddJamWhenVC.xib */; };
 		E733E43219BC4BB700B9961B /* JFJamSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E733E43119BC4BB700B9961B /* JFJamSession.m */; };
 		E77A2B5619BC1FE800AE8FD8 /* JFMusician.m in Sources */ = {isa = PBXBuildFile; fileRef = E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */; };
+		E78D1C8919BC67D600D4F403 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E78D1C8819BC67D600D4F403 /* AsyncImageView.m */; };
 		E795B46219BC174100FD1FD1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E795B46119BC174100FD1FD1 /* Parse.framework */; };
 		E795B48519BC17F000FD1FD1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E795B48419BC17F000FD1FD1 /* Social.framework */; };
 		E7A0854F19BBBFB200C42245 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0854E19BBBFB200C42245 /* Foundation.framework */; };
@@ -74,8 +74,6 @@
 		7A7BA22219BBD11C000DDD4B /* JFJamMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFJamMemberCell.m; sourceTree = "<group>"; };
 		7A7BA22319BBD11C000DDD4B /* JFJamMemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFJamMemberCell.xib; sourceTree = "<group>"; };
 		7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		E7073D6819BC0280006F3AF6 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = AsyncImageView/AsyncImageView/AsyncImageView.h; sourceTree = SOURCE_ROOT; };
-		E7073D6919BC0280006F3AF6 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = AsyncImageView/AsyncImageView/AsyncImageView.m; sourceTree = SOURCE_ROOT; };
 		E733E41A19BC323600B9961B /* JFSignUpLogInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFSignUpLogInVC.h; sourceTree = "<group>"; };
 		E733E41B19BC323600B9961B /* JFSignUpLogInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFSignUpLogInVC.m; sourceTree = "<group>"; };
 		E733E41C19BC323600B9961B /* JFSignUpLogInVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFSignUpLogInVC.xib; sourceTree = "<group>"; };
@@ -89,6 +87,8 @@
 		E733E43119BC4BB700B9961B /* JFJamSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFJamSession.m; sourceTree = "<group>"; };
 		E77A2B5419BC1FE800AE8FD8 /* JFMusician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMusician.h; sourceTree = "<group>"; };
 		E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMusician.m; sourceTree = "<group>"; };
+		E78D1C8719BC67D600D4F403 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = SOURCE_ROOT; };
+		E78D1C8819BC67D600D4F403 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = SOURCE_ROOT; };
 		E795B46019BC173100FD1FD1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		E795B46119BC174100FD1FD1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Pods/Parse/Parse.framework; sourceTree = "<group>"; };
 		E795B46519BC175900FD1FD1 /* BFExecutor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFExecutor.h; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 		7A7BA22619BBD22B000DDD4B /* AsyncImageView */ = {
 			isa = PBXGroup;
 			children = (
-				E7073D6819BC0280006F3AF6 /* AsyncImageView.h */,
-				E7073D6919BC0280006F3AF6 /* AsyncImageView.m */,
+				E78D1C8719BC67D600D4F403 /* AsyncImageView.h */,
+				E78D1C8819BC67D600D4F403 /* AsyncImageView.m */,
 			);
 			name = AsyncImageView;
 			path = "../../shared/PSHandy/AsyncImageView-master/AsyncImageView";
@@ -624,10 +624,10 @@
 				7A7BA21C19BBCF1E000DDD4B /* JFViewJamsVC.m in Sources */,
 				7A7BA22019BBCF95000DDD4B /* JFJamsContainerViewController.m in Sources */,
 				7A7BA22419BBD11C000DDD4B /* JFJamMemberCell.m in Sources */,
+				E78D1C8919BC67D600D4F403 /* AsyncImageView.m in Sources */,
 				E77A2B5619BC1FE800AE8FD8 /* JFMusician.m in Sources */,
 				E7A0855B19BBBFB200C42245 /* main.m in Sources */,
 				E7FDC79619BC0DB200080438 /* JFLoginWithSCVC.m in Sources */,
-				E7073D6A19BC0280006F3AF6 /* AsyncImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
