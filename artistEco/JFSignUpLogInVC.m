@@ -56,7 +56,7 @@
             NSLog(@"signed up the user");
             JFJamSession *jamSessionHosted = [[JFJamSession alloc]init];
             jamSessionHosted = self.jamSessionInProgress;
-            [jamSessionHosted addObject:thisUser.objectId forKey:@"jamMembers"];
+            [jamSessionHosted addObject:thisUser forKey:@"jamMembers"];
             [jamSessionHosted saveInBackground];
         }];
 

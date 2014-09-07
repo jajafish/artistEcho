@@ -51,6 +51,7 @@
             [self.annotations addObject:point];
         }
     }
+
     [self.mapView addAnnotations:self.annotations];
     
     MKCoordinateRegion Stockton = MKCoordinateRegionMake(CLLocationCoordinate2DMake([lat floatValue],[lng floatValue]), MKCoordinateSpanMake(0.05, 0.05));
@@ -78,6 +79,7 @@
 {
     
     PFQuery *jamQuery = [PFQuery queryWithClassName:@"JFJamSession"];
+    [jamQuery includeKey:@"jamMembers"];
     [jamQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error){
             NSLog(@"success there are %lu jams", (unsigned long)objects.count);

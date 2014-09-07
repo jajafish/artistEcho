@@ -42,8 +42,10 @@
 //        }
 //        self.lblGenres.text = txtGenre;
     }
+    
+    
 //    self.arrJamMembers = [self.jamData objectForKey:@"members"];
-//    [self.tableView registerNib:[UINib nibWithNibName:@"JFJamMemberCell" bundle:nil] forCellReuseIdentifier:@"jamCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"JFJamMemberCell" bundle:nil] forCellReuseIdentifier:@"jamCell"];
     
     /*CLLocationCoordinate2D annotationCoord;
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
@@ -59,6 +61,31 @@
 
     // Do any additional setup after loading the view from its nib.
 }
+
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    [self queryForJamMembers];
+//}
+//
+//
+//-(void)queryForJamMembers
+//{
+//    PFQuery *jamMembersQuery = [PFQuery queryWithClassName:@"User"];
+//    //    [jamMembersQuery whereKey:@"objectId" equalTo:[self.jamData objectForKey:@"jamMembers"]];
+//    
+//    [jamMembersQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        if (!error){
+//            self.arrJamMembers = [objects mutableCopy];
+//        } else
+//        {
+//            NSLog(@"error %@ %@", error, [error userInfo]);
+//        }
+//    }];
+//
+//    NSLog(@"here are the jam members %@", self.arrJamMembers);
+//    
+//}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -93,12 +120,10 @@
     
 }
 
-
 /*-(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
     
 }
-
 
 -(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
