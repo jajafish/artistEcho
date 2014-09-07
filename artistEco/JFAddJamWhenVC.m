@@ -168,6 +168,7 @@
         }
         if (scResponse[@"avatar_url"]){
             userProfile[@"avatar_url"] = scResponse[@"avatar_url"];
+//            userProfile[@"avatar_url"] = [[scResponse[@"avatar_url"] stringByReplacingOccurrencesOfString:@"large" withString:@"original"]];
         }
         if (scResponse[@"city"]){
             userProfile[@"city"] = scResponse[@"city"];

@@ -22,7 +22,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8a-Qw-MJe">
-                            <rect key="frame" x="42" y="11" width="98" height="21"/>
+                            <rect key="frame" x="42" y="11" width="271" height="21"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                             <color key="textColor" red="0.32156862745098036" green="0.32549019607843138" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -40,16 +40,20 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons-13.png" translatesAutoresizingMaskIntoConstraints="NO" id="gad-FD-Haa">
-                            <rect key="frame" x="20" y="13" width="16" height="20"/>
+                            <rect key="frame" x="18" y="13" width="16" height="20"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons-14.png" translatesAutoresizingMaskIntoConstraints="NO" id="S6e-yR-r2Y">
-                            <rect key="frame" x="21" y="44" width="14" height="14"/>
+                            <rect key="frame" x="19" y="44" width="14" height="14"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons-16.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kft-7p-JmS">
                             <rect key="frame" x="20" y="71" width="13" height="14"/>
                         </imageView>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgX-od-BAx">
+                            <rect key="frame" x="0.0" y="96" width="320" height="1"/>
+                            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqD-pa-lXL">
-                            <rect key="frame" x="246" y="99" width="46" height="22"/>
+                            <rect key="frame" x="137" y="105" width="46" height="22"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                             <state key="normal" title="Join">
                                 <color key="titleColor" red="0.30196078431372547" green="0.65490196078431373" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
@@ -59,13 +63,6 @@
                                 <action selector="joinJam" destination="-1" eventType="touchUpInside" id="N1Y-MO-nMo"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons-11.png" translatesAutoresizingMaskIntoConstraints="NO" id="w8T-l8-4zW">
-                            <rect key="frame" x="280" y="99" width="28" height="23"/>
-                        </imageView>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgX-od-BAx">
-                            <rect key="frame" x="0.0" y="96" width="320" height="1"/>
-                            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.84705882352941175" green="0.85882352941176465" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -84,7 +81,6 @@
         </view>
     </objects>
     <resources>
-        <image name="icons-11.png" width="28" height="23"/>
         <image name="icons-13.png" width="15" height="19"/>
         <image name="icons-14.png" width="14" height="14"/>
         <image name="icons-16.png" width="13" height="14"/>

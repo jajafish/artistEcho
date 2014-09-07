@@ -16,6 +16,7 @@
 		E733E42A19BC393800B9961B /* JFAddJamWhenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E733E42819BC393800B9961B /* JFAddJamWhenVC.m */; };
 		E733E42B19BC393800B9961B /* JFAddJamWhenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E733E42919BC393800B9961B /* JFAddJamWhenVC.xib */; };
 		E733E43219BC4BB700B9961B /* JFJamSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E733E43119BC4BB700B9961B /* JFJamSession.m */; };
+		E759D93E19BCAC3B00DA148D /* JFMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E759D93D19BCAC3B00DA148D /* JFMapViewController.xib */; };
 		E77A2B5619BC1FE800AE8FD8 /* JFMusician.m in Sources */ = {isa = PBXBuildFile; fileRef = E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */; };
 		E78D1C8919BC67D600D4F403 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E78D1C8819BC67D600D4F403 /* AsyncImageView.m */; };
 		E78D1C8C19BC6AD900D4F403 /* JFJamsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78D1C8B19BC6AD900D4F403 /* JFJamsContainerViewController.m */; };
@@ -34,7 +35,6 @@
 		E78D1CAD19BC6C3000D4F403 /* icons-15.png in Resources */ = {isa = PBXBuildFile; fileRef = E78D1CA419BC6C3000D4F403 /* icons-15.png */; };
 		E78D1CAE19BC6C3000D4F403 /* icons-16.png in Resources */ = {isa = PBXBuildFile; fileRef = E78D1CA519BC6C3000D4F403 /* icons-16.png */; };
 		E78D1CAF19BC6C3000D4F403 /* icons-17.png in Resources */ = {isa = PBXBuildFile; fileRef = E78D1CA619BC6C3000D4F403 /* icons-17.png */; };
-		E78D1CB119BC755C00D4F403 /* JFMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78D1CB019BC755C00D4F403 /* JFMapViewController.xib */; };
 		E795B46219BC174100FD1FD1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E795B46119BC174100FD1FD1 /* Parse.framework */; };
 		E795B48519BC17F000FD1FD1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E795B48419BC17F000FD1FD1 /* Social.framework */; };
 		E7A0854F19BBBFB200C42245 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0854E19BBBFB200C42245 /* Foundation.framework */; };
@@ -89,6 +89,7 @@
 		E733E42919BC393800B9961B /* JFAddJamWhenVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFAddJamWhenVC.xib; sourceTree = "<group>"; };
 		E733E43019BC4BB700B9961B /* JFJamSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFJamSession.h; sourceTree = "<group>"; };
 		E733E43119BC4BB700B9961B /* JFJamSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFJamSession.m; sourceTree = "<group>"; };
+		E759D93D19BCAC3B00DA148D /* JFMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFMapViewController.xib; sourceTree = "<group>"; };
 		E77A2B5419BC1FE800AE8FD8 /* JFMusician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMusician.h; sourceTree = "<group>"; };
 		E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMusician.m; sourceTree = "<group>"; };
 		E78D1C8719BC67D600D4F403 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = SOURCE_ROOT; };
@@ -113,7 +114,6 @@
 		E78D1CA419BC6C3000D4F403 /* icons-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-15.png"; path = "../icons-15.png"; sourceTree = "<group>"; };
 		E78D1CA519BC6C3000D4F403 /* icons-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-16.png"; path = "../icons-16.png"; sourceTree = "<group>"; };
 		E78D1CA619BC6C3000D4F403 /* icons-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-17.png"; path = "../icons-17.png"; sourceTree = "<group>"; };
-		E78D1CB019BC755C00D4F403 /* JFMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFMapViewController.xib; sourceTree = "<group>"; };
 		E795B46019BC173100FD1FD1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		E795B46119BC174100FD1FD1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Pods/Parse/Parse.framework; sourceTree = "<group>"; };
 		E795B46519BC175900FD1FD1 /* BFExecutor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFExecutor.h; sourceTree = "<group>"; };
@@ -503,7 +503,7 @@
 		E7FDC79219BC0D6500080438 /* jam container */ = {
 			isa = PBXGroup;
 			children = (
-				E78D1CB019BC755C00D4F403 /* JFMapViewController.xib */,
+				E759D93D19BCAC3B00DA148D /* JFMapViewController.xib */,
 				E78D1C8A19BC6AD900D4F403 /* JFJamsContainerViewController.h */,
 				E78D1C8B19BC6AD900D4F403 /* JFJamsContainerViewController.m */,
 			);
@@ -626,7 +626,7 @@
 				E78D1CAA19BC6C3000D4F403 /* icons-12.png in Resources */,
 				E78D1CAB19BC6C3000D4F403 /* icons-13.png in Resources */,
 				E78D1CAF19BC6C3000D4F403 /* icons-17.png in Resources */,
-				E78D1CB119BC755C00D4F403 /* JFMapViewController.xib in Resources */,
+				E759D93E19BCAC3B00DA148D /* JFMapViewController.xib in Resources */,
 				E78D1C9619BC6AF500D4F403 /* JFViewJamsVC.xib in Resources */,
 				E7FDC79E19BC0E5900080438 /* JFMySCTracksVC.xib in Resources */,
 				E78D1C9C19BC6B3D00D4F403 /* JFChoosePathVC.xib in Resources */,

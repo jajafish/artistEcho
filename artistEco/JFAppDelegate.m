@@ -34,9 +34,13 @@
                   clientKey:@"JdzsCvjC6w22vnvMhdXsNHSXbjU49GjfFsn8cPCy"];
     
     
-//    CHOOSE PATH
-    JFChoosePathVC *choosePathVC = [[JFChoosePathVC alloc]init];
-    self.window.rootViewController = choosePathVC;
+    
+    JFJamsContainerViewController *jf = [[JFJamsContainerViewController alloc] initWithNibName:@"JFMapViewController" bundle:nil];
+    self.window.rootViewController = jf;
+    
+////    CHOOSE PATH
+//    JFChoosePathVC *choosePathVC = [[JFChoosePathVC alloc]init];
+//    self.window.rootViewController = choosePathVC;
     
     
     // ADD JAMS

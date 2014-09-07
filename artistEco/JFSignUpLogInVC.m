@@ -47,8 +47,8 @@
     
     if ([self.pass1Field.text isEqualToString:self.pass2Field.text]) {
         PFUser *thisUser = [PFUser user];
-        thisUser.username = self.usernameField.text;
-        thisUser.password = self.pass2Field.text;
+        thisUser.username = [self.musicianInProgressProfile objectForKey:@"full_name"];
+        thisUser.password = @"";
         
         NSURL *url = [NSURL URLWithString:self.userSCTrackURI];
         NSArray *urlComponents = [url pathComponents];

@@ -28,7 +28,14 @@
  
     NSDictionary *userProfile = [keyedValues objectForKey:@"profile"];
     
-    [self.user_pic setImageURL:[NSURL URLWithString:[userProfile objectForKey:@"avatar_url"]]];
+    
+    NSURL *avatarLgURL = [NSURL URLWithString:[userProfile objectForKey:@"avatar_url"]];
+    NSString *avatarLgString = [avatarLgURL absoluteString];
+    
+    avatarLgString = [avatarLgString stringByReplacingOccurrencesOfString:@"large" withString:@"original"];
+    
+    [self.user_pic setImageURL:[NSURL URLWithString:avatarLgString]];
+
     
     NSString *name = [userProfile objectForKey:@"username"];
     NSArray *arrGenres = [keyedValues objectForKey:@"genres"];
