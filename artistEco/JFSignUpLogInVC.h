@@ -11,5 +11,6 @@
 @interface JFSignUpLogInVC : UIViewController
 
 @property (strong, nonatomic) NSDictionary *userProfileDictionary;
+@property (strong, nonatomic) NSString *userSCTrackURI;
 
 @end

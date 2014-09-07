@@ -12,6 +12,7 @@
 #import <Parse/Parse.h>
 #import "JFMusician.h"
 #import "JFAddJamWhereVC.h"
+#import "JFJamSession.h"
 
 @implementation JFAppDelegate
 
@@ -26,6 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [JFMusician registerSubclass];
+    [JFJamSession registerSubclass];
     
     [Parse setApplicationId:@"aGteGk8MEwD1hXG8F2HkqNGxWSVIgDFf88VklyvZ"
                   clientKey:@"JdzsCvjC6w22vnvMhdXsNHSXbjU49GjfFsn8cPCy"];

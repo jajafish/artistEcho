@@ -8,6 +8,7 @@
 
 #import "JFMySCTracksVC.h"
 #import <UIKit/UIKit.h>
+#import "JFSignUpLogInVC.h"
 
 @interface JFMySCTracksVC () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *myTracksTableView;
@@ -33,6 +34,8 @@
     // Do any additional setup after loading the view from its nib.
     self.myTracksTableView.delegate = self;
     self.myTracksTableView.dataSource = self;
+    
+    NSLog(@"TRACK LIST PAGE ----------------- %@ %@", self.musicianInProgressProfile, self.jamSessionInProgress);
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,6 +80,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *track = [self.tracks objectAtIndex:indexPath.row];
     NSString *streamURL = [track objectForKey:@"stream_url"];
+    
+    JFSignUpLogInVC *signUpVC = [[JFSignUpLogInVC alloc]init];
+    signUpVC.userSCTrackURI = streamURL;
+    
+    [self presentViewController:signUpVC animated:YES completion:nil];
+    
+    
     
 //    SCAccount *account = [SCSoundCloud account];
 //    

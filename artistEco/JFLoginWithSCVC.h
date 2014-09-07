@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JFJamSession.h"
 
 @interface JFLoginWithSCVC : UIViewController
 
 // IF LOGIN WITH SC COMES AT END OF ADD-JAM FLOW
-@property (strong, nonatomic) NSString *jamAddress;
-@property (strong, nonatomic) NSString *jamCity;
-@property (strong, nonatomic) NSDate *jamDate;
+//@property (strong, nonatomic) NSString *jamAddress;
+//@property (strong, nonatomic) NSString *jamCity;
+//@property (strong, nonatomic) NSDate *jamDate;
+
+@property (strong, nonatomic) JFJamSession *jamSessionInProgress;
+
 
 @end

@@ -34,6 +34,7 @@
     // Do any additional setup after loading the view from its nib.
 
     NSLog(@"the user is %@", [PFUser currentUser]);
+    NSLog(@"its the jf login with sc and the jam session is %@", self.jamSessionInProgress);
     
 }
 
@@ -124,8 +125,6 @@
         NSError *jsonError = nil;
         NSJSONSerialization *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 
-    
-        
             NSDictionary *scResponse = [[NSDictionary alloc]init];
             scResponse = (NSDictionary *)jsonResponse;
         
@@ -156,15 +155,9 @@
             userProfile[@"uri"] = scResponse[@"uri"];
         }
         
-//        NSLog(@"the saved profile is %@", userProfile);
-        
         JFSignUpLogInVC *signUpVC = [[JFSignUpLogInVC alloc]init];
         signUpVC.userProfileDictionary = userProfile;
         [self presentViewController:signUpVC animated:YES completion:nil];
-        
-//        PFObject *musician = [PFObject objectWithClassName:@"musician"];
-//        [musician setObject:userProfile forKey:@"userProfile"];
-//        [musician saveInBackground];
 
     };
     

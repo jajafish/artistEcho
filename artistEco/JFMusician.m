@@ -11,6 +11,7 @@
 
 @implementation JFMusician
 
-@dynamic musicianName, musicianGenres, musicianImageLink, musicianInstruments, musicianSongLink, musicianSoundCloudID;
+@dynamic musicianName, musicianGenres, musicianImageLink, musicianInstruments, musicianSongLink, musicianSoundCloudID, musicianProfileDictionary;
+
 
 @end

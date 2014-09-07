@@ -10,6 +10,7 @@
 
 @interface JFMusician : PFUser <PFSubclassing>
 
+@property (strong, nonatomic) NSDictionary *musicianProfileDictionary;
 @property (strong, nonatomic) NSString *musicianName;
 @property (strong, nonatomic) NSString *musicianSoundCloudID;
 @property (strong, nonatomic) NSString *musicianSongLink;

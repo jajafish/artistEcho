@@ -9,9 +9,14 @@
 #import "JFAddJamWhenVC.h"
 #import "JFLoginWithSCVC.h"
 #import "JFMySCTracksVC.h"
+#import "JFJamSession.h"
+#import "JFMusician.h"
 
 @interface JFAddJamWhenVC ()
 @property (strong, nonatomic) IBOutlet UIDatePicker *jamWhenDatePicker;
+@property (strong, nonatomic) JFJamSession *jamSessionInProgress;
+//@property (strong, nonatomic) JFMusician *musicianInProgress;
+@property (strong, nonatomic) NSMutableDictionary *musicianInProgressProfile;
 
 @end
 
@@ -30,6 +35,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self collectSCUserData];
+    
+    NSLog(@"the jam city and address are %@ %@", self.jamAddress, self.jamCity);
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,10 +48,22 @@
 }
 - (IBAction)didPressNext:(UIButton *)sender {
     
+    self.jamSessionInProgress = [[JFJamSession alloc]init];
+    self.jamSessionInProgress.jamAddress = self.jamAddress;
+    self.jamSessionInProgress.jamCity = self.jamCity;
+    self.jamSessionInProgress.jamDate = self.jamWhenDatePicker.date;
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"jamSessionInProgressNotification" object:self userInfo:[NSDictionary dictionaryWithObject:self.jamSessionInProgress forKey:@"theJamSessionBeingMade"]];
+    
     JFLoginWithSCVC *scLoginVC = [[JFLoginWithSCVC alloc]init];
-    scLoginVC.jamAddress = self.jamAddress;
-    scLoginVC.jamCity = self.jamCity;
-    scLoginVC.jamDate = self.jamWhenDatePicker.date;
+//    scLoginVC.jamSessionInProgress = self.jamSessionInProgress;
+    
+//    scLoginVC.jamAddress = self.jamAddress;
+//    scLoginVC.jamCity = self.jamCity;
+//    scLoginVC.jamDate = self.jamWhenDatePicker.date;
+
+    
+    
 //    [self presentViewController:scLoginVC animated:YES completion:nil];
     
     
@@ -69,14 +90,13 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    if ([SCSoundCloud account]){
+    if ([SCSoundCloud account] && self.jamSessionInProgress.jamDate){
         [self presentSCTrackListing];
     }
 }
 
 -(void)askForUserTrackSelection
 {
-    
     
     SCAccount *account = [SCSoundCloud account];
     if (account == nil) {
@@ -115,6 +135,8 @@
                  withAccount:account
       sendingProgressHandler:nil
              responseHandler:handler];
+    
+
     
 }
 
@@ -162,15 +184,10 @@
             userProfile[@"uri"] = scResponse[@"uri"];
         }
         
-        //        NSLog(@"the saved profile is %@", userProfile);
+        self.musicianInProgressProfile = userProfile;
+        NSLog(@"JAM WHEN PAGE ------------- %@", self.musicianInProgressProfile);
         
-//        JFSignUpLogInVC *signUpVC = [[JFSignUpLogInVC alloc]init];
-//        signUpVC.userProfileDictionary = userProfile;
-//        [self presentViewController:signUpVC animated:YES completion:nil];
-        
-        //        PFObject *musician = [PFObject objectWithClassName:@"musician"];
-        //        [musician setObject:userProfile forKey:@"userProfile"];
-        //        [musician saveInBackground];
+//        [[NSNotificationCenter defaultCenter]postNotificationName:@"musicianInProgressNotification" object:self userInfo:[NSDictionary dictionaryWithObject:self.musicianInProgress forKey:@"theMusicianBeingMade"]];
         
     };
     
@@ -181,6 +198,7 @@
 
 -(void)presentSCTrackListing
 {
+    
     SCAccount *account = [SCSoundCloud account];
     if (account == nil) {
         UIAlertView *alert = [[UIAlertView alloc]
@@ -206,6 +224,11 @@
                            initWithNibName:@"JFMySCTracksVC"
                            bundle:nil];
             trackListVC.tracks = (NSArray *)jsonResponse;
+            trackListVC.musicianInProgressProfile = self.musicianInProgressProfile;
+            trackListVC.jamSessionInProgress = self.jamSessionInProgress;
+            
+            
+            
             [self presentViewController:trackListVC
                                animated:YES completion:nil];
         }
