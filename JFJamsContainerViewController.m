@@ -87,6 +87,8 @@
             NSLog(@"success there are %lu jams", (unsigned long)objects.count);
             self.jamsViaParse = [objects mutableCopy];
             NSLog(@"here are all the jam sessions via parse: %@", self.jamsViaParse);
+            
+            
         } else {
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }

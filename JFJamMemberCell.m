@@ -21,10 +21,14 @@
 }
 
 -(void)setValuesForKeysWithDictionary:(NSDictionary *)keyedValues
+
 {
-    [self.user_pic setImageURL:[NSURL URLWithString:[keyedValues objectForKey:@"image_link"]]];
+ 
+    NSDictionary *userProfile = [keyedValues objectForKey:@"profile"];
     
-    NSString *name = [keyedValues objectForKey:@"username"];
+    [self.user_pic setImageURL:[NSURL URLWithString:[userProfile objectForKey:@"avatar_url"]]];
+    
+    NSString *name = [userProfile objectForKey:@"username"];
     NSArray *arrGenres = [keyedValues objectForKey:@"genres"];
     NSArray *arrInstruments = [keyedValues objectForKey:@"instruments"];
     
