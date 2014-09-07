@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A5788D719BC85FB008DF316 /* dots-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A5788D519BC85FB008DF316 /* dots-19.png */; };
+		7A5788D819BC85FB008DF316 /* dots-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A5788D619BC85FB008DF316 /* dots-20.png */; };
+		7A72BCAD19BC7CCF00E75850 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A72BCAC19BC7CCF00E75850 /* Accounts.framework */; };
+		7A72BCB219BC7D0400E75850 /* libPods-CocoaSoundCloudAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A72BCB019BC7D0400E75850 /* libPods-CocoaSoundCloudAPI.a */; };
+		7A72BCB319BC7D0400E75850 /* libPods-CocoaSoundCloudUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A72BCB119BC7D0400E75850 /* libPods-CocoaSoundCloudUI.a */; };
+		7A72BCB519BC7D1B00E75850 /* libPods-NXOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A72BCB419BC7D1B00E75850 /* libPods-NXOAuth2Client.a */; };
+		7A72BCB719BC7D2F00E75850 /* libPods-Bolts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A72BCB619BC7D2F00E75850 /* libPods-Bolts.a */; };
+		7A72BCB919BC7D4000E75850 /* libPods-OHAttributedLabel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A72BCB819BC7D4000E75850 /* libPods-OHAttributedLabel.a */; };
 		7A7BA22B19BBF4E6000DDD4B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */; };
-		C50A387D131C420BBF72638B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E80B1A0C0184524B90CE439 /* libPods.a */; };
 		E733E41D19BC323600B9961B /* JFSignUpLogInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E733E41B19BC323600B9961B /* JFSignUpLogInVC.m */; };
 		E733E41E19BC323600B9961B /* JFSignUpLogInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E733E41C19BC323600B9961B /* JFSignUpLogInVC.xib */; };
 		E733E42319BC391C00B9961B /* JFAddJamWhereVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E733E42119BC391C00B9961B /* JFAddJamWhereVC.m */; };
@@ -76,7 +83,15 @@
 
 /* Begin PBXFileReference section */
 		3E7EF4A732A742B1B93E0744 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		5E80B1A0C0184524B90CE439 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5788D519BC85FB008DF316 /* dots-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dots-19.png"; sourceTree = SOURCE_ROOT; };
+		7A5788D619BC85FB008DF316 /* dots-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dots-20.png"; sourceTree = SOURCE_ROOT; };
+		7A72BCAC19BC7CCF00E75850 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		7A72BCAE19BC7CE300E75850 /* libPods-Bolts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Bolts.a"; path = "Pods/build/Release-iphoneos/libPods-Bolts.a"; sourceTree = "<group>"; };
+		7A72BCB019BC7D0400E75850 /* libPods-CocoaSoundCloudAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-CocoaSoundCloudAPI.a"; path = "Pods/build/Release-iphoneos/libPods-CocoaSoundCloudAPI.a"; sourceTree = "<group>"; };
+		7A72BCB119BC7D0400E75850 /* libPods-CocoaSoundCloudUI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-CocoaSoundCloudUI.a"; path = "Pods/build/Release-iphoneos/libPods-CocoaSoundCloudUI.a"; sourceTree = "<group>"; };
+		7A72BCB419BC7D1B00E75850 /* libPods-NXOAuth2Client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-NXOAuth2Client.a"; path = "Pods/build/Release-iphoneos/libPods-NXOAuth2Client.a"; sourceTree = "<group>"; };
+		7A72BCB619BC7D2F00E75850 /* libPods-Bolts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Bolts.a"; path = "Pods/build/Release-iphoneos/libPods-Bolts.a"; sourceTree = "<group>"; };
+		7A72BCB819BC7D4000E75850 /* libPods-OHAttributedLabel.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-OHAttributedLabel.a"; path = "Pods/build/Release-iphoneos/libPods-OHAttributedLabel.a"; sourceTree = "<group>"; };
 		7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E733E41A19BC323600B9961B /* JFSignUpLogInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFSignUpLogInVC.h; sourceTree = "<group>"; };
 		E733E41B19BC323600B9961B /* JFSignUpLogInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFSignUpLogInVC.m; sourceTree = "<group>"; };
@@ -185,6 +200,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A72BCB919BC7D4000E75850 /* libPods-OHAttributedLabel.a in Frameworks */,
+				7A72BCB719BC7D2F00E75850 /* libPods-Bolts.a in Frameworks */,
+				7A72BCB519BC7D1B00E75850 /* libPods-NXOAuth2Client.a in Frameworks */,
+				7A72BCB219BC7D0400E75850 /* libPods-CocoaSoundCloudAPI.a in Frameworks */,
+				7A72BCB319BC7D0400E75850 /* libPods-CocoaSoundCloudUI.a in Frameworks */,
+				7A72BCAD19BC7CCF00E75850 /* Accounts.framework in Frameworks */,
 				E795B48519BC17F000FD1FD1 /* Social.framework in Frameworks */,
 				E795B46219BC174100FD1FD1 /* Parse.framework in Frameworks */,
 				E7A0859819BBC04C00C42245 /* SystemConfiguration.framework in Frameworks */,
@@ -201,7 +222,6 @@
 				7A7BA22B19BBF4E6000DDD4B /* MapKit.framework in Frameworks */,
 				E7A0855319BBBFB200C42245 /* UIKit.framework in Frameworks */,
 				E7A0854F19BBBFB200C42245 /* Foundation.framework in Frameworks */,
-				C50A387D131C420BBF72638B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +273,8 @@
 				E733E42019BC391C00B9961B /* JFAddJamWhereVC.h */,
 				E733E42119BC391C00B9961B /* JFAddJamWhereVC.m */,
 				E733E42219BC391C00B9961B /* JFAddJamWhereVC.xib */,
+				7A5788D519BC85FB008DF316 /* dots-19.png */,
+				7A5788D619BC85FB008DF316 /* dots-20.png */,
 			);
 			name = where;
 			sourceTree = "<group>";
@@ -405,6 +427,13 @@
 		E7A0854D19BBBFB200C42245 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A72BCB819BC7D4000E75850 /* libPods-OHAttributedLabel.a */,
+				7A72BCB619BC7D2F00E75850 /* libPods-Bolts.a */,
+				7A72BCB419BC7D1B00E75850 /* libPods-NXOAuth2Client.a */,
+				7A72BCB019BC7D0400E75850 /* libPods-CocoaSoundCloudAPI.a */,
+				7A72BCB119BC7D0400E75850 /* libPods-CocoaSoundCloudUI.a */,
+				7A72BCAE19BC7CE300E75850 /* libPods-Bolts.a */,
+				7A72BCAC19BC7CCF00E75850 /* Accounts.framework */,
 				E795B48419BC17F000FD1FD1 /* Social.framework */,
 				E795B46319BC175900FD1FD1 /* Bolts */,
 				E795B46119BC174100FD1FD1 /* Parse.framework */,
@@ -425,7 +454,6 @@
 				E7A0855019BBBFB200C42245 /* CoreGraphics.framework */,
 				E7A0855219BBBFB200C42245 /* UIKit.framework */,
 				E7A0856D19BBBFB300C42245 /* XCTest.framework */,
-				5E80B1A0C0184524B90CE439 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -612,6 +640,7 @@
 				E78D1CAC19BC6C3000D4F403 /* icons-14.png in Resources */,
 				E7FDC79719BC0DB200080438 /* JFLoginWithSCVC.xib in Resources */,
 				E78D1CAD19BC6C3000D4F403 /* icons-15.png in Resources */,
+				7A5788D819BC85FB008DF316 /* dots-20.png in Resources */,
 				E7A0856719BBBFB300C42245 /* Images.xcassets in Resources */,
 				E78D1C9119BC6AE800D4F403 /* JFJamMemberCell.xib in Resources */,
 				E7A0855919BBBFB200C42245 /* InfoPlist.strings in Resources */,
@@ -626,6 +655,7 @@
 				E78D1CAA19BC6C3000D4F403 /* icons-12.png in Resources */,
 				E78D1CAB19BC6C3000D4F403 /* icons-13.png in Resources */,
 				E78D1CAF19BC6C3000D4F403 /* icons-17.png in Resources */,
+				7A5788D719BC85FB008DF316 /* dots-19.png in Resources */,
 				E78D1CB119BC755C00D4F403 /* JFMapViewController.xib in Resources */,
 				E78D1C9619BC6AF500D4F403 /* JFViewJamsVC.xib in Resources */,
 				E7FDC79E19BC0E5900080438 /* JFMySCTracksVC.xib in Resources */,
@@ -828,6 +858,11 @@
 					"$(PROJECT_DIR)/**",
 				);
 				INFOPLIST_FILE = "artistEco/artistEco-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Release-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -858,6 +893,11 @@
 					"$(PROJECT_DIR)/**",
 				);
 				INFOPLIST_FILE = "artistEco/artistEco-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Release-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",

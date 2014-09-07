@@ -73,6 +73,7 @@
         } else if (error) {
             NSLog(@"Error: %@", [error localizedDescription]);
         } else {
+            [self presentSCTrackListing];
             NSLog(@"Done!");
         }
     };
@@ -88,12 +89,12 @@
     
 }
 
--(void)viewDidAppear:(BOOL)animated
+/*-(void)viewDidAppear:(BOOL)animated
 {
-    if ([SCSoundCloud account] && self.jamSessionInProgress.jamDate){
+    if ([SCSoundCloud account] && self.jamSessionInProgress.jamDate && !self.musicianInProgressProfile){
         [self presentSCTrackListing];
     }
-}
+}*/
 
 -(void)askForUserTrackSelection
 {

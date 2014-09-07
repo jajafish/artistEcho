@@ -67,7 +67,7 @@
                 initWithStyle:UITableViewCellStyleDefault
                 reuseIdentifier:CellIdentifier];
     }
-    
+    [cell.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:16.0]];
     NSDictionary *track = [self.tracks objectAtIndex:indexPath.row];
     cell.textLabel.text = [track objectForKey:@"title"];
     
@@ -81,13 +81,19 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     NSDictionary *track = [self.tracks objectAtIndex:indexPath.row];
     NSString *streamURL = [track objectForKey:@"stream_url"];
     
-    JFSignUpLogInVC *signUpVC = [[JFSignUpLogInVC alloc]init];
-    signUpVC.userSCTrackURI = streamURL;
-    signUpVC.musicianInProgressProfile = self.musicianInProgressProfile;
-    signUpVC.jamSessionInProgress = self.jamSessionInProgress;
-    
-    [self presentViewController:signUpVC animated:YES completion:nil];
-    
+    PFUser *thisUser = [PFUser user];
+    thisUser.username = [self.musicianInProgressProfile objectForKey:@"full_name"];
+    thisUser.password = @"";
+    thisUser[@"profile"] = self.musicianInProgressProfile;
+    thisUser[@"scTrackID"] = streamURL;
+    [thisUser setObject:self.jamSessionInProgress forKey:@"jamSessionHosted"];
+    [thisUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        NSLog(@"signed up the user");
+    }];
+    JFJamSession *jamSessionHosted = [[JFJamSession alloc]init];
+    jamSessionHosted = self.jamSessionInProgress;
+    [jamSessionHosted saveInBackground];
+    [[[self.presentingViewController presentingViewController] presentingViewController] dismissViewControllerAnimated:YES completion:nil];
     
 //    SCAccount *account = [SCSoundCloud account];
 //    

@@ -127,6 +127,7 @@
 
             NSDictionary *scResponse = [[NSDictionary alloc]init];
             scResponse = (NSDictionary *)jsonResponse;
+            NSLog(@"scResponse:%@",scResponse);
         
             NSMutableDictionary *userProfile = [[NSMutableDictionary alloc]init];
         

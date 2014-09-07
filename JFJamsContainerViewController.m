@@ -8,6 +8,7 @@
 
 #import "JFJamsContainerViewController.h"
 #import "JFViewJamsVC.h"
+#import "JFAddJamWhereVC.h" 
 
 @interface JFJamsContainerViewController ()
 
@@ -99,8 +100,15 @@
         //you have to calculate how to get the map point annotation in the middle of the box in the top of the screen, by setting the center coordinate
         
         CLLocationCoordinate2D currentCoord = [view.annotation coordinate];
+        [mapView setCenterCoordinate:currentCoord];
+        //CLLocationCoordinate2D newCenter = currentCoord;
+        //newCenter.longitude = newCenter.latitude - 0.1;
+        
+        CGPoint fakecenter = CGPointMake(160, 550);
+        CLLocationCoordinate2D coordinate = [mapView convertPoint:fakecenter toCoordinateFromView:mapView];
+        [mapView setCenterCoordinate:coordinate animated:YES];
         //CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(<#CLLocationDegrees latitude#>, <#CLLocationDegrees longitude#>)
-        //[self.mapView setCenterCoordinate:<#(CLLocationCoordinate2D)#> animated:<#(BOOL)#>]
+        //[self.mapView setCenterCoordinate:newCenter animated:YES];
         
         NSLog(@"annotation selected:%@",view);
         [UIView animateWithDuration:0.4 animations:^{
@@ -120,7 +128,23 @@
     }
 }
 
+-(void)setFakeCenterForCoordinate:(CLLocationCoordinate2D)coord
+{
+    
+}
 
+-(IBAction)dismissJamsView:(id)sender
+{
+    if (self.jamViewExpanded)
+    {
+        [UIView animateWithDuration:0.4 animations:^{
+            CGRect frame = self.pageController.view.frame;
+            frame.origin.y = self.view.bounds.size.height;
+            self.pageController.view.frame = frame;
+        }];
+        self.jamViewExpanded = NO;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -147,7 +171,7 @@
     NSUInteger index = [(JFViewJamsVC *)viewController indexNumber];
     
     index++;
-    if (index > [self.arrJams count]) {
+    if (index >= [self.arrJams count]) {
         
         return nil;
         
@@ -161,8 +185,18 @@
     childViewController.indexNumber = index;
     NSMutableDictionary *data = [self.arrJams objectAtIndex:index];
     childViewController.data = data;
+    
+    
     return childViewController;
     
+}
+
+-(IBAction)createNewJam
+{
+        JFAddJamWhereVC *addJamVC = [[JFAddJamWhereVC alloc]initWithNibName:@"JFAddJamWhereVC" bundle:nil];
+    //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:addJamVC];
+    //nav.navigationBarHidden = YES;
+        [self presentViewController:addJamVC animated:YES completion:nil];
 }
 
 /*- (void)setViewControllers:(NSArray *)viewControllers direction:(UIPageViewControllerNavigationDirection)direction animated:(BOOL)animated completion:(void (^)(BOOL finished))completion

@@ -27,7 +27,7 @@
         NSMutableString *txtGenre = [[NSMutableString alloc] init];
         for (NSString * genre in [self.data objectForKey:@"genres"])
         {
-            [txtGenre appendFormat:@"%@ ",genre];
+            [txtGenre appendFormat:@"#%@ ",genre];
         }
         self.lblGenres.text = txtGenre;
     }
@@ -61,7 +61,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 326;
+    return 306;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

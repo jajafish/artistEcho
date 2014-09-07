@@ -35,8 +35,8 @@
     
     
 //    CHOOSE PATH
-    JFChoosePathVC *choosePathVC = [[JFChoosePathVC alloc]init];
-    self.window.rootViewController = choosePathVC;
+//    JFChoosePathVC *choosePathVC = [[JFChoosePathVC alloc]init];
+//    self.window.rootViewController = choosePathVC;
     
     
     // ADD JAMS
@@ -45,8 +45,8 @@
 //    
     
     // VIEW JAMS
-//    JFJamsContainerViewController *jf = [[JFJamsContainerViewController alloc] init];
-//    self.window.rootViewController = jf;
+    JFJamsContainerViewController *jf = [[JFJamsContainerViewController alloc] initWithNibName:@"JFMapViewController" bundle:nil];
+    self.window.rootViewController = jf;
     
     // LOGIN
 //    JFLoginWithSCVC *loginVC = [[JFLoginWithSCVC alloc]init];
