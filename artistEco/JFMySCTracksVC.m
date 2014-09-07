@@ -9,16 +9,14 @@
 #import "JFMySCTracksVC.h"
 #import <UIKit/UIKit.h>
 
-
 @interface JFMySCTracksVC () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *myTracksTableView;
-
 
 @end
 
 @implementation JFMySCTracksVC
 
-@synthesize tracks;
+@synthesize tracks, player;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -71,6 +69,28 @@
     cell.textLabel.text = [track objectForKey:@"title"];
     
     return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *track = [self.tracks objectAtIndex:indexPath.row];
+    NSString *streamURL = [track objectForKey:@"stream_url"];
+    
+    SCAccount *account = [SCSoundCloud account];
+    
+    [SCRequest performMethod:SCRequestMethodGET
+                  onResource:[NSURL URLWithString:streamURL]
+             usingParameters:nil
+                 withAccount:account
+      sendingProgressHandler:nil
+             responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                 NSError *playerError;
+                 player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
+                 [player prepareToPlay];
+                 [player play];
+             }];
 }
 
 @end

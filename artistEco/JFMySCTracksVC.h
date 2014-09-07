@@ -12,5 +12,6 @@
 @interface JFMySCTracksVC : UIViewController <AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) NSArray *tracks;
+@property (strong, nonatomic) AVAudioPlayer *player;
 
 @end
