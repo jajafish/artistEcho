@@ -15,12 +15,50 @@
 
 @implementation JFJamsContainerViewController
 
+-(CGFloat)topMapViewHeight
+{
+    return 84.0;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSNumber *lat = [NSNumber numberWithDouble:37.767997];
+    NSNumber *lng = [NSNumber numberWithDouble:-122.3921315];
+    
+    NSMutableDictionary *jam1 =  [@{@"location":@"123 Fake St.",@"latitude":lat,@"longitude":lng,@"date":@"Aug 23, 2014",@"time":@"5 PM",@"genres":@[@"rock",@"pop"],@"members":@[@{@"name":@"Stephanie"},@{@"name":@"Jared"},@{@"name":@"Paul"}]} mutableCopy];
+    NSMutableDictionary *jam2 = [@{@"location":@"415 Folsom St",@"date":@"Sep 2, 2014",@"time":@"8 PM",@"genres":@[@"jazz"],@"members":@[@{@"name":@"Stephanie",@"audio_link":@"http:etc"},@{@"name":@"Jared"}]} mutableCopy];
+    self.arrJams = [NSMutableArray array];
+    self.annotations = [NSMutableArray array];
+
+    [self.arrJams addObject:jam1]; 
+    [self.arrJams addObject:jam2];
+    
+    
+    CLLocationCoordinate2D loc;
+    
+    for (NSDictionary *jam in self.arrJams)
+    {
+        if ([jam objectForKey:@"latitude"] != 0){
+            CGFloat lat = [[jam objectForKey:@"latitude"] floatValue];
+            CGFloat longi = [[jam objectForKey:@"longitude"] floatValue];
+            MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+            CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(lat, longi);
+            NSLog(@"lat:%f long:%f",loc.latitude,loc.longitude);
+
+            point.coordinate = loc;
+            [self.annotations addObject:point];
+        }
+    }
+    [self.mapView addAnnotations:self.annotations];
+    
+    MKCoordinateRegion Stockton = MKCoordinateRegionMake(CLLocationCoordinate2DMake([lat floatValue],[lng floatValue]), MKCoordinateSpanMake(0.05, 0.05));
+    [self.mapView setRegion:Stockton];
+    
     self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageController.dataSource = self;
-    [self.pageController.view setFrame:self.view.bounds];
+    
+    [self.pageController.view setFrame:CGRectMake(0, self.view.bounds.size.height, 320, self.view.bounds.size.height-[self topMapViewHeight])];
     
     JFViewJamsVC *viewControllerObject = [self viewControllerAtIndex:0];
     
@@ -29,8 +67,60 @@
     [self addChildViewController:self.pageController];
     [[self view] addSubview:self.pageController.view];
     [self.pageController didMoveToParentViewController:self];
+
     // Do any additional setup after loading the view.
 }
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    MKPinAnnotationView *pinView =
+    (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"pin"];
+    if (!pinView)
+    {
+        MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation
+                                                                        reuseIdentifier:@"pin"];
+        
+        //NSLog(@"imageName:%@",imageName);
+        UIImage *flagImage = [UIImage imageNamed:@"icons-09.png"];
+        annotationView.image = flagImage;
+        annotationView.canShowCallout = NO;
+        return annotationView;
+    }
+    else {
+        pinView.annotation = annotation;
+    }
+    return pinView;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    if (!self.jamViewExpanded){
+        
+        //you have to calculate how to get the map point annotation in the middle of the box in the top of the screen, by setting the center coordinate
+        
+        CLLocationCoordinate2D currentCoord = [view.annotation coordinate];
+        //CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(<#CLLocationDegrees latitude#>, <#CLLocationDegrees longitude#>)
+        //[self.mapView setCenterCoordinate:<#(CLLocationCoordinate2D)#> animated:<#(BOOL)#>]
+        
+        NSLog(@"annotation selected:%@",view);
+        [UIView animateWithDuration:0.4 animations:^{
+            CGRect frame = self.pageController.view.frame;
+            frame.origin.y = [self topMapViewHeight];
+            self.pageController.view.frame = frame;
+        }];
+        self.jamViewExpanded = YES;
+    }
+    else {
+        [UIView animateWithDuration:0.4 animations:^{
+            CGRect frame = self.pageController.view.frame;
+            frame.origin.y = self.view.bounds.size.height;
+            self.pageController.view.frame = frame;
+        }];
+        self.jamViewExpanded = NO;
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -69,6 +159,8 @@
     
     JFViewJamsVC *childViewController = [[JFViewJamsVC alloc] initWithNibName:@"JFViewJamsVC" bundle:nil];
     childViewController.indexNumber = index;
+    NSMutableDictionary *data = [self.arrJams objectAtIndex:index];
+    childViewController.data = data;
     return childViewController;
     
 }

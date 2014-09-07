@@ -19,8 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.data = [@{@"location":@"123 Fake St.",@"date":@"Aug 23, 2014",@"time":@"5 PM",@"genres":@[@"rock",@"pop"],@"members":@[@{@"name":@"Stephanie"},@{@"name":@"Jared"},@{@"name":@"Paul"}]} mutableCopy];
-    
     if (self.data)
     {
         self.lblLocation.text = [self.data objectForKey:@"location"];
@@ -34,10 +32,20 @@
         self.lblGenres.text = txtGenre;
     }
     self.arrJamMembers = [self.data objectForKey:@"members"];
-    
-    
     [self.tableView registerNib:[UINib nibWithNibName:@"JFJamMemberCell" bundle:nil] forCellReuseIdentifier:@"jamCell"];
     
+    /*CLLocationCoordinate2D annotationCoord;
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    annotationCoord.latitude = [[self.data objectForKey:@"latitude"] floatValue];
+    annotationCoord.longitude = [[self.data objectForKey:@"longitude"] floatValue];
+    annotation.coordinate = annotationCoord;
+    annotation.title = [self.data objectForKey:@"location"];*/
+    
+    //[self.mapView addAnnotation:annotation];
+    
+    //MKCoordinateRegion Stockton = MKCoordinateRegionMake(CLLocationCoordinate2DMake(annotationCoord.latitude,annotationCoord.longitude), MKCoordinateSpanMake(0.001, 0.001));
+    //[self.mapView setRegion:Stockton];
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -68,6 +76,12 @@
 {
     // write parse code to add self to jams table
 }
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 
 /*-(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
