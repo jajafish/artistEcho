@@ -50,6 +50,7 @@
         thisUser.username = self.usernameField.text;
         thisUser.password = self.pass2Field.text;
         thisUser[@"profile"] = self.musicianInProgressProfile;
+        thisUser[@"scTrackID"] = self.userSCTrackURI;
         [thisUser setObject:self.jamSessionInProgress forKey:@"jamSessionHosted"];
         [thisUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             NSLog(@"signed up the user");
