@@ -49,9 +49,15 @@
         PFUser *thisUser = [PFUser user];
         thisUser.username = self.usernameField.text;
         thisUser.password = self.pass2Field.text;
+        
+        NSURL *url = [NSURL URLWithString:self.userSCTrackURI];
+        NSArray *urlComponents = [url pathComponents];
+        NSString *trackID = [urlComponents objectAtIndex:2];
+        NSLog(@"the song id is %@", trackID);
+        
+//        [self.musicianInProgressProfile setObject:trackID forKey:@"scTrackID"];
+        [self.musicianInProgressProfile setObject:self.userSCTrackURI forKey:@"scTrackID"];
         thisUser[@"profile"] = self.musicianInProgressProfile;
-        thisUser[@"scTrackID"] = self.userSCTrackURI;
-//        [thisUser setObject:self.jamSessionInProgress forKey:@"jamSessionHosted"];
         [thisUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             NSLog(@"signed up the user");
             JFJamSession *jamSessionHosted = [[JFJamSession alloc]init];

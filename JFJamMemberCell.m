@@ -7,8 +7,10 @@
 //
 
 #import "JFJamMemberCell.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation JFJamMemberCell
+@synthesize player;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -46,6 +48,27 @@
     {
         [instruments appendFormat:@"#%@ ",instrument];
     }
+    
+    //    //    //    //    //    //    //    //    //    //
+    
+    NSString *songURLString = [userProfile objectForKey:@"scTrackID"];
+    NSLog(@"song url is %@", songURLString);
+    SCAccount *account = [SCSoundCloud account];
+    
+    [SCRequest performMethod:SCRequestMethodGET
+                  onResource:[NSURL URLWithString:songURLString]
+             usingParameters:nil
+                 withAccount:account
+      sendingProgressHandler:nil
+             responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                 NSError *playerError;
+                 self.player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
+                 [self.player prepareToPlay];
+                 [self.player play];
+             }];
+    
 }
+
+
 
 @end

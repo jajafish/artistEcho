@@ -152,8 +152,6 @@
         NSError *jsonError = nil;
         NSJSONSerialization *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         
-        
-        
         NSDictionary *scResponse = [[NSDictionary alloc]init];
         scResponse = (NSDictionary *)jsonResponse;
         
