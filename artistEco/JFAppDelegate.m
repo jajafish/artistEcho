@@ -9,6 +9,7 @@
 #import "JFAppDelegate.h"
 #import "JFJamsContainerViewController.h"
 #import "JFLoginWithSCVC.h"
+#import <Parse/Parse.h>
 
 @implementation JFAppDelegate
 
@@ -17,6 +18,9 @@
     [SCSoundCloud  setClientID:@"761ee8c9a61ac87e0a47e39ac682b5fa"
                         secret:@"2d38975763cb42619866fcee64b4c609"
                    redirectURL:[NSURL URLWithString:@"sampleproject://oauth"]];
+    
+    [Parse setApplicationId:@"aGteGk8MEwD1hXG8F2HkqNGxWSVIgDFf88VklyvZ"
+                  clientKey:@"JdzsCvjC6w22vnvMhdXsNHSXbjU49GjfFsn8cPCy"];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

@@ -8,6 +8,7 @@
 
 #import "JFLoginWithSCVC.h"
 #import "JFMySCTracksVC.h"
+#import <Parse/Parse.h>
 
 @interface JFLoginWithSCVC ()
 
@@ -98,6 +99,10 @@
                  withAccount:account
       sendingProgressHandler:nil
              responseHandler:handler];
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"User"];
+    testObject[@"soundcloudsong"] = @"shreddin";
+    [testObject saveInBackground];
     
 }
 
