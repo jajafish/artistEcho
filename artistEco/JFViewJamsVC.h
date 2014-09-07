@@ -13,7 +13,7 @@
 
 @property IBOutlet UITableView *tableView; 
 @property IBOutlet MKMapView *mapView;
-@property IBOutlet UILabel *lblLocation, *lblDate, *lblTime, *lblGenres;
+@property IBOutlet UILabel *lblLocation, *lblDate, *lblTime, *lblGenres, *lblMembers;
 @property NSMutableArray *arrJamMembers; 
 @property NSMutableDictionary *data; 
 @property NSUInteger indexNumber;
