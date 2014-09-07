@@ -1,5 +1,5 @@
 //
-//  JFLoginWithSCVC.h
+//  JFAddJamWhenVC.h
 //  artistEco
 //
 //  Created by Jared Fishman on 9/6/14.
@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JFLoginWithSCVC : UIViewController
+@interface JFAddJamWhenVC : UIViewController
 
-// IF LOGIN WITH SC COMES AT END OF ADD-JAM FLOW
 @property (strong, nonatomic) NSString *jamAddress;
 @property (strong, nonatomic) NSString *jamCity;
-@property (strong, nonatomic) NSDate *jamDate;
 
 @end

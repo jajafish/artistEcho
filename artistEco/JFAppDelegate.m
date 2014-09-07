@@ -11,6 +11,7 @@
 #import "JFLoginWithSCVC.h"
 #import <Parse/Parse.h>
 #import "JFMusician.h"
+#import "JFAddJamWhereVC.h"
 
 @implementation JFAppDelegate
 
@@ -28,12 +29,19 @@
     
     [Parse setApplicationId:@"aGteGk8MEwD1hXG8F2HkqNGxWSVIgDFf88VklyvZ"
                   clientKey:@"JdzsCvjC6w22vnvMhdXsNHSXbjU49GjfFsn8cPCy"];
+    
+    // ADD JAMS
+    JFAddJamWhereVC *addJamVC = [[JFAddJamWhereVC alloc]init];
+    self.window.rootViewController = addJamVC;
+    
+    
+    // VIEW JAMS
 //    JFJamsContainerViewController *jf = [[JFJamsContainerViewController alloc] init];
 //    self.window.rootViewController = jf;
     
-    
-    JFLoginWithSCVC *loginVC = [[JFLoginWithSCVC alloc]init];
-    self.window.rootViewController = loginVC;
+    // LOGIN
+//    JFLoginWithSCVC *loginVC = [[JFLoginWithSCVC alloc]init];
+//    self.window.rootViewController = loginVC;
     
     return YES;
 }

@@ -90,8 +90,7 @@
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         if ([data length])[self.SCWebView loadRequest:request];
     }];
-    
-    
+
     
 }
 
