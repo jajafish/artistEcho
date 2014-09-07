@@ -51,13 +51,15 @@
         thisUser.password = self.pass2Field.text;
         thisUser[@"profile"] = self.musicianInProgressProfile;
         thisUser[@"scTrackID"] = self.userSCTrackURI;
-        [thisUser setObject:self.jamSessionInProgress forKey:@"jamSessionHosted"];
+//        [thisUser setObject:self.jamSessionInProgress forKey:@"jamSessionHosted"];
         [thisUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             NSLog(@"signed up the user");
+            JFJamSession *jamSessionHosted = [[JFJamSession alloc]init];
+            jamSessionHosted = self.jamSessionInProgress;
+            [jamSessionHosted addObject:thisUser.objectId forKey:@"jamMembers"];
+            [jamSessionHosted saveInBackground];
         }];
-        JFJamSession *jamSessionHosted = [[JFJamSession alloc]init];
-        jamSessionHosted = self.jamSessionInProgress;
-        [jamSessionHosted saveInBackground];
+
     }
     
 }
