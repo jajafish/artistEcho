@@ -25,7 +25,6 @@
     //              clientKey:@"JdzsCvjC6w22vnvMhdXsNHSXbjU49GjfFsn8cPCy"];
     
     
-    
 //    JFJamsContainerViewController *jf = [[JFJamsContainerViewController alloc] init];
 //    self.window.rootViewController = jf;
     

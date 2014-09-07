@@ -78,19 +78,22 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     NSDictionary *track = [self.tracks objectAtIndex:indexPath.row];
     NSString *streamURL = [track objectForKey:@"stream_url"];
     
-    SCAccount *account = [SCSoundCloud account];
+//    SCAccount *account = [SCSoundCloud account];
+//    
+//    [SCRequest performMethod:SCRequestMethodGET
+//                  onResource:[NSURL URLWithString:streamURL]
+//             usingParameters:nil
+//                 withAccount:account
+//      sendingProgressHandler:nil
+//             responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+//                 NSError *playerError;
+//                 player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
+//                 [player prepareToPlay];
+//                 [player play];
+//             }];
     
-    [SCRequest performMethod:SCRequestMethodGET
-                  onResource:[NSURL URLWithString:streamURL]
-             usingParameters:nil
-                 withAccount:account
-      sendingProgressHandler:nil
-             responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                 NSError *playerError;
-                 player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
-                 [player prepareToPlay];
-                 [player play];
-             }];
+    
+    
 }
 
 @end
