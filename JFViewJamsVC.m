@@ -13,26 +13,37 @@
 
 @end
 
-
 @implementation JFViewJamsVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (self.data)
+    if (self.jamData)
     {
-        self.lblLocation.text = [self.data objectForKey:@"location"];
-        self.lblDate.text = [self.data objectForKey:@"date"];
-        self.lblTime.text = [self.data objectForKey:@"time"];
-        NSMutableString *txtGenre = [[NSMutableString alloc] init];
-        for (NSString * genre in [self.data objectForKey:@"genres"])
-        {
-            [txtGenre appendFormat:@"%@ ",genre];
-        }
-        self.lblGenres.text = txtGenre;
+//        
+//        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+//        [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss zzz"];
+//        NSString *stringFromDate = [formatter stringFromDate:<#(NSDate *)#>]
+//        
+        
+        NSString *dateString = [NSDateFormatter localizedStringFromDate:[self.jamData objectForKey:@"jamDate"]
+                                                              dateStyle:NSDateFormatterShortStyle
+                                                              timeStyle:NSDateFormatterFullStyle];
+        
+        NSLog(@"the date for this jame is %@", dateString);
+        
+        self.lblLocation.text = [self.jamData objectForKey:@"jamAddress"];
+        self.lblDate.text = dateString;
+//        self.lblTime.text = [self.jamData objectForKey:@"time"];
+//        NSMutableString *txtGenre = [[NSMutableString alloc] init];
+//        for (NSString * genre in [self.jamData objectForKey:@"genres"])
+//        {
+//            [txtGenre appendFormat:@"%@ ",genre];
+//        }
+//        self.lblGenres.text = txtGenre;
     }
-    self.arrJamMembers = [self.data objectForKey:@"members"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"JFJamMemberCell" bundle:nil] forCellReuseIdentifier:@"jamCell"];
+//    self.arrJamMembers = [self.jamData objectForKey:@"members"];
+//    [self.tableView registerNib:[UINib nibWithNibName:@"JFJamMemberCell" bundle:nil] forCellReuseIdentifier:@"jamCell"];
     
     /*CLLocationCoordinate2D annotationCoord;
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];

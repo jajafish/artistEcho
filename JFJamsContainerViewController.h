@@ -15,6 +15,8 @@
 @property (strong, nonatomic) UIPageViewController *pageController;
 @property NSMutableArray *annotations;
 @property IBOutlet MKMapView *mapView;
-@property BOOL jamViewExpanded; 
+@property BOOL jamViewExpanded;
+
+@property (strong, nonatomic) NSMutableArray *jamsViaParse;
 
 @end

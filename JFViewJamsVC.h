@@ -15,7 +15,7 @@
 @property IBOutlet MKMapView *mapView;
 @property IBOutlet UILabel *lblLocation, *lblDate, *lblTime, *lblGenres, *lblMembers;
 @property NSMutableArray *arrJamMembers; 
-@property NSMutableDictionary *data; 
+@property NSMutableDictionary *jamData;
 @property NSUInteger indexNumber;
 @property NSMutableArray *annotations;
 

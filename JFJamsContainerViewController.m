@@ -8,6 +8,7 @@
 
 #import "JFJamsContainerViewController.h"
 #import "JFViewJamsVC.h"
+#import "JFJamSession.h"
 
 @interface JFJamsContainerViewController ()
 
@@ -67,9 +68,28 @@
     [self addChildViewController:self.pageController];
     [[self view] addSubview:self.pageController.view];
     [self.pageController didMoveToParentViewController:self];
+    
+    [self queryForJamSessions];
 
     // Do any additional setup after loading the view.
 }
+
+-(void)queryForJamSessions
+{
+    
+    PFQuery *jamQuery = [PFQuery queryWithClassName:@"JFJamSession"];
+    [jamQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error){
+            NSLog(@"success there are %lu jams", (unsigned long)objects.count);
+            self.jamsViaParse = [objects mutableCopy];
+            NSLog(@"here are all the jam sessions via parse: %@", self.jamsViaParse);
+        } else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
+}
+
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
@@ -159,8 +179,8 @@
     
     JFViewJamsVC *childViewController = [[JFViewJamsVC alloc] initWithNibName:@"JFViewJamsVC" bundle:nil];
     childViewController.indexNumber = index;
-    NSMutableDictionary *data = [self.arrJams objectAtIndex:index];
-    childViewController.data = data;
+    NSMutableDictionary *jamData = [self.jamsViaParse objectAtIndex:index];
+    childViewController.jamData = jamData;
     return childViewController;
     
 }
