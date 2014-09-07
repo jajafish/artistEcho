@@ -12,6 +12,8 @@
 
 @interface JFLoginWithSCVC ()
 
+@property (strong, nonatomic) NSDictionary *scProfile;
+
 @end
 
 @implementation JFLoginWithSCVC
@@ -100,10 +102,50 @@
       sendingProgressHandler:nil
              responseHandler:handler];
     
+    
+    
+    [self getUserInfo];
+    
     PFObject *testObject = [PFObject objectWithClassName:@"User"];
     testObject[@"soundcloudsong"] = @"shreddin";
     [testObject saveInBackground];
     
 }
+
+-(void)getUserInfo
+{
+    
+    NSLog(@"should be displaying profile info --------");
+    
+    SCAccount *account = [SCSoundCloud account];
+    
+    SCRequestResponseHandler handler;
+    handler = ^(NSURLResponse *response, NSData *data, NSError *error){
+        NSError *jsonError = nil;
+        NSJSONSerialization *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+
+            
+            self.scProfile = [[NSDictionary alloc]init];
+            self.scProfile = (NSDictionary *)jsonResponse;
+            NSLog(@"here is the profile: %@", self.scProfile);
+            
+//
+//            NSLog(@"%@", response);
+//            NSLog(@"%@", jsonResponse);
+
+    };
+    
+    NSString *resourceURL = @"https://api.soundcloud.com/me.json";
+    [SCRequest performMethod:SCRequestMethodGET onResource:[NSURL URLWithString:resourceURL] usingParameters:nil withAccount:account sendingProgressHandler:nil responseHandler:handler];
+    
+    
+}
+
+//-(void)saveSCInfoToParseUser
+//{
+//    
+////    NSDictionary *soundcloudResults = (NSDictionary *)
+//    
+//}
 
 @end

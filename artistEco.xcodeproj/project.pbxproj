@@ -15,6 +15,7 @@
 		7A7BA22B19BBF4E6000DDD4B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */; };
 		C50A387D131C420BBF72638B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E80B1A0C0184524B90CE439 /* libPods.a */; };
 		E7073D6A19BC0280006F3AF6 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7073D6919BC0280006F3AF6 /* AsyncImageView.m */; };
+		E77A2B5619BC1FE800AE8FD8 /* JFMusician.m in Sources */ = {isa = PBXBuildFile; fileRef = E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */; };
 		E795B46219BC174100FD1FD1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E795B46119BC174100FD1FD1 /* Parse.framework */; };
 		E795B48519BC17F000FD1FD1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E795B48419BC17F000FD1FD1 /* Social.framework */; };
 		E7A0854F19BBBFB200C42245 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0854E19BBBFB200C42245 /* Foundation.framework */; };
@@ -68,6 +69,8 @@
 		7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E7073D6819BC0280006F3AF6 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = AsyncImageView/AsyncImageView/AsyncImageView.h; sourceTree = SOURCE_ROOT; };
 		E7073D6919BC0280006F3AF6 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = AsyncImageView/AsyncImageView/AsyncImageView.m; sourceTree = SOURCE_ROOT; };
+		E77A2B5419BC1FE800AE8FD8 /* JFMusician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMusician.h; sourceTree = "<group>"; };
+		E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMusician.m; sourceTree = "<group>"; };
 		E795B46019BC173100FD1FD1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		E795B46119BC174100FD1FD1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Pods/Parse/Parse.framework; sourceTree = "<group>"; };
 		E795B46519BC175900FD1FD1 /* BFExecutor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFExecutor.h; sourceTree = "<group>"; };
@@ -180,6 +183,23 @@
 			);
 			name = AsyncImageView;
 			path = "../../shared/PSHandy/AsyncImageView-master/AsyncImageView";
+			sourceTree = "<group>";
+		};
+		E77A2B5219BC1FBC00AE8FD8 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				E77A2B5319BC1FC300AE8FD8 /* musician-user */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		E77A2B5319BC1FC300AE8FD8 /* musician-user */ = {
+			isa = PBXGroup;
+			children = (
+				E77A2B5419BC1FE800AE8FD8 /* JFMusician.h */,
+				E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */,
+			);
+			name = "musician-user";
 			sourceTree = "<group>";
 		};
 		E795B45F19BC173100FD1FD1 /* Parse */ = {
@@ -295,6 +315,7 @@
 		E7A0855419BBBFB200C42245 /* artistEco */ = {
 			isa = PBXGroup;
 			children = (
+				E77A2B5219BC1FBC00AE8FD8 /* models */,
 				E7A0855D19BBBFB200C42245 /* JFAppDelegate.h */,
 				E7A0855E19BBBFB200C42245 /* JFAppDelegate.m */,
 				E7FDC78E19BC0D4E00080438 /* vcs */,
@@ -527,6 +548,7 @@
 				7A7BA21C19BBCF1E000DDD4B /* JFViewJamsVC.m in Sources */,
 				7A7BA22019BBCF95000DDD4B /* JFJamsContainerViewController.m in Sources */,
 				7A7BA22419BBD11C000DDD4B /* JFJamMemberCell.m in Sources */,
+				E77A2B5619BC1FE800AE8FD8 /* JFMusician.m in Sources */,
 				E7A0855B19BBBFB200C42245 /* main.m in Sources */,
 				E7FDC79619BC0DB200080438 /* JFLoginWithSCVC.m in Sources */,
 				E7073D6A19BC0280006F3AF6 /* AsyncImageView.m in Sources */,
