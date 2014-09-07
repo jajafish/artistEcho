@@ -8,16 +8,29 @@
 
 #import "JFAppDelegate.h"
 #import "JFJamsContainerViewController.h"
+#import "JFLoginWithSCVC.h"
 
 @implementation JFAppDelegate
+
++ (void)initialize;
+{
+    [SCSoundCloud  setClientID:@"761ee8c9a61ac87e0a47e39ac682b5fa"
+                        secret:@"2d38975763cb42619866fcee64b4c609"
+                   redirectURL:[NSURL URLWithString:@"sampleproject://oauth"]];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //[Parse setApplicationId:@"aGteGk8MEwD1hXG8F2HkqNGxWSVIgDFf88VklyvZ"
     //              clientKey:@"JdzsCvjC6w22vnvMhdXsNHSXbjU49GjfFsn8cPCy"];
     
-    JFJamsContainerViewController *jf = [[JFJamsContainerViewController alloc] init];
-    self.window.rootViewController = jf;
+    
+    
+//    JFJamsContainerViewController *jf = [[JFJamsContainerViewController alloc] init];
+//    self.window.rootViewController = jf;
+    
+    JFLoginWithSCVC *loginVC = [[JFLoginWithSCVC alloc]init];
+    self.window.rootViewController = loginVC;
     
     return YES;
 }

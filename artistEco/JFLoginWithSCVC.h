@@ -1,5 +1,5 @@
 //
-//  JFViewController.h
+//  JFLoginWithSCVC.h
 //  artistEco
 //
 //  Created by Jared Fishman on 9/6/14.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
 
-@interface JFViewController : UIViewController
+@interface JFLoginWithSCVC : UIViewController
 
 @end
