@@ -48,7 +48,7 @@
     {
         [genres appendFormat:@"#%@ ",genre];
     }
-    self.lblGenres.text = genres;
+//    self.lblGenres.text = genres;
     
     NSMutableString *instruments = [[NSMutableString alloc] init];
     for (NSString *instrument in arrInstruments)
@@ -56,6 +56,8 @@
         [instruments appendFormat:@"#%@ ",instrument];
     }
     
+    //    //    //    //    //    //    //    //    //    //
+    //                  SOUNDCLOUD PLAYER                 //
     //    //    //    //    //    //    //    //    //    //
     
     NSString *songURLString = [userProfile objectForKey:@"scTrackID"];

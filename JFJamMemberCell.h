@@ -13,7 +13,7 @@
 @interface JFJamMemberCell : UITableViewCell <AVAudioPlayerDelegate>
 
 @property IBOutlet UIImageView *user_pic; 
-@property IBOutlet UILabel *lblName, *lblGenres, *lblInstruments;
+@property (strong, nonatomic) IBOutlet UILabel *lblName;
 
 @property (strong, nonatomic) NSDictionary *musicianProfile;
 
