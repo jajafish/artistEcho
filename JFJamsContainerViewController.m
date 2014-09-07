@@ -69,15 +69,17 @@
     [self addChildViewController:self.pageController];
     [[self view] addSubview:self.pageController.view];
     [self.pageController didMoveToParentViewController:self];
-    
-    [self queryForJamSessions];
 
     // Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+        [self queryForJamSessions];
+}
+
 -(void)queryForJamSessions
 {
-    
     PFQuery *jamQuery = [PFQuery queryWithClassName:@"JFJamSession"];
     [jamQuery includeKey:@"jamMembers"];
     [jamQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -89,7 +91,6 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-    
 }
 
 
@@ -169,7 +170,7 @@
     NSUInteger index = [(JFViewJamsVC *)viewController indexNumber];
     
     index++;
-    if (index > [self.arrJams count]) {
+    if (index >= [self.jamsViaParse count]) {
         
         return nil;
         

@@ -44,7 +44,7 @@
     }
     
     
-//    self.arrJamMembers = [self.jamData objectForKey:@"members"];
+    self.arrJamMembers = [self.jamData objectForKey:@"jamMembers"];
     [self.tableView registerNib:[UINib nibWithNibName:@"JFJamMemberCell" bundle:nil] forCellReuseIdentifier:@"jamCell"];
     
     /*CLLocationCoordinate2D annotationCoord;
@@ -62,29 +62,6 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-//-(void)viewWillAppear:(BOOL)animated
-//{
-//    [self queryForJamMembers];
-//}
-//
-//
-//-(void)queryForJamMembers
-//{
-//    PFQuery *jamMembersQuery = [PFQuery queryWithClassName:@"User"];
-//    //    [jamMembersQuery whereKey:@"objectId" equalTo:[self.jamData objectForKey:@"jamMembers"]];
-//    
-//    [jamMembersQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        if (!error){
-//            self.arrJamMembers = [objects mutableCopy];
-//        } else
-//        {
-//            NSLog(@"error %@ %@", error, [error userInfo]);
-//        }
-//    }];
-//
-//    NSLog(@"here are the jam members %@", self.arrJamMembers);
-//    
-//}
 
 
 - (void)didReceiveMemoryWarning {

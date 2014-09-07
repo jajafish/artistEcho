@@ -24,7 +24,7 @@
 {
     [self.user_pic setImageURL:[NSURL URLWithString:[keyedValues objectForKey:@"image_link"]]];
     
-    NSString *name = [keyedValues objectForKey:@"name"];
+    NSString *name = [keyedValues objectForKey:@"username"];
     NSArray *arrGenres = [keyedValues objectForKey:@"genres"];
     NSArray *arrInstruments = [keyedValues objectForKey:@"instruments"];
     
