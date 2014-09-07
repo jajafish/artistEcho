@@ -18,5 +18,6 @@
 @property (strong, nonatomic) NSDictionary *musicianProfile;
 
 @property (strong, nonatomic) AVAudioPlayer *player;
+//@property (strong, nonatomic) AVPlayer *player;
 
 @end

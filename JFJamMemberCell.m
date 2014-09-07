@@ -67,6 +67,15 @@
                  [self.player play];
              }];
     
+//    NSError *error;
+//    NSURL *songURLURL = [NSURL URLWithString:songURLString];
+//    NSLog(@"the song url is %@", songURLURL);
+//    self.player = [[AVPlayer alloc]initWithURL:songURLURL];
+//    [self.player prerollAtRate:5 completionHandler:^(BOOL finished) {
+//        [self.player play];
+//    }];
+
+    
 }
 
 

@@ -62,14 +62,6 @@
     
     [self.pageController.view setFrame:CGRectMake(0, self.view.bounds.size.height, 320, self.view.bounds.size.height-[self topMapViewHeight])];
     
-    JFViewJamsVC *viewControllerObject = [self viewControllerAtIndex:0];
-    
-    NSArray *viewControllers = [NSArray arrayWithObject:viewControllerObject];
-    [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    [self addChildViewController:self.pageController];
-    [[self view] addSubview:self.pageController.view];
-    [self.pageController didMoveToParentViewController:self];
-
     // Do any additional setup after loading the view.
 }
 
@@ -87,6 +79,13 @@
             NSLog(@"success there are %lu jams", (unsigned long)objects.count);
             self.jamsViaParse = [objects mutableCopy];
             NSLog(@"here are all the jam sessions via parse: %@", self.jamsViaParse);
+            
+            JFViewJamsVC *viewControllerObject = [self viewControllerAtIndex:0];
+            NSArray *viewControllers = [NSArray arrayWithObject:viewControllerObject];
+            [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+            [self addChildViewController:self.pageController];
+            [[self view] addSubview:self.pageController.view];
+            [self.pageController didMoveToParentViewController:self];
             
             
         } else {

@@ -8,6 +8,7 @@
 
 #import "JFViewJamsVC.h"
 #import "JFJamMemberCell.h"
+#import "JFJamSession.h"
 
 @interface JFViewJamsVC ()
 
@@ -89,8 +90,18 @@
 
 -(IBAction)joinJam
 {
-    // write parse code to add self to jams table
+//    NSDictionary *jamSession = self.jamData;
+//    JFJamSession *jamSessionoObject = [[JFJamSession alloc]init];
+//    
+//    [jamSession enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+//        [jamSessionoObject setValue:obj forKey:key];
+//    }];
+//    
+//    [jamSessionoObject addObject:[PFUser currentUser] forKey:@"jamMembers"];
+//    [jamSessionoObject saveInBackground];
 }
+
+
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
