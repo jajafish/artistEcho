@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A7BA21C19BBCF1E000DDD4B /* JFViewJamsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7BA21A19BBCF1E000DDD4B /* JFViewJamsVC.m */; };
-		7A7BA21D19BBCF1E000DDD4B /* JFViewJamsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7BA21B19BBCF1E000DDD4B /* JFViewJamsVC.xib */; };
-		7A7BA22019BBCF95000DDD4B /* JFJamsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7BA21F19BBCF95000DDD4B /* JFJamsContainerViewController.m */; };
-		7A7BA22419BBD11C000DDD4B /* JFJamMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7BA22219BBD11C000DDD4B /* JFJamMemberCell.m */; };
-		7A7BA22519BBD11C000DDD4B /* JFJamMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7BA22319BBD11C000DDD4B /* JFJamMemberCell.xib */; };
 		7A7BA22B19BBF4E6000DDD4B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */; };
 		C50A387D131C420BBF72638B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E80B1A0C0184524B90CE439 /* libPods.a */; };
 		E733E41D19BC323600B9961B /* JFSignUpLogInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E733E41B19BC323600B9961B /* JFSignUpLogInVC.m */; };
@@ -23,6 +18,23 @@
 		E733E43219BC4BB700B9961B /* JFJamSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E733E43119BC4BB700B9961B /* JFJamSession.m */; };
 		E77A2B5619BC1FE800AE8FD8 /* JFMusician.m in Sources */ = {isa = PBXBuildFile; fileRef = E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */; };
 		E78D1C8919BC67D600D4F403 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E78D1C8819BC67D600D4F403 /* AsyncImageView.m */; };
+		E78D1C8C19BC6AD900D4F403 /* JFJamsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78D1C8B19BC6AD900D4F403 /* JFJamsContainerViewController.m */; };
+		E78D1C9019BC6AE800D4F403 /* JFJamMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E78D1C8E19BC6AE800D4F403 /* JFJamMemberCell.m */; };
+		E78D1C9119BC6AE800D4F403 /* JFJamMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78D1C8F19BC6AE800D4F403 /* JFJamMemberCell.xib */; };
+		E78D1C9519BC6AF500D4F403 /* JFViewJamsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E78D1C9319BC6AF500D4F403 /* JFViewJamsVC.m */; };
+		E78D1C9619BC6AF500D4F403 /* JFViewJamsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78D1C9419BC6AF500D4F403 /* JFViewJamsVC.xib */; };
+		E78D1C9B19BC6B3D00D4F403 /* JFChoosePathVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E78D1C9919BC6B3D00D4F403 /* JFChoosePathVC.m */; };
+		E78D1C9C19BC6B3D00D4F403 /* JFChoosePathVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78D1C9A19BC6B3D00D4F403 /* JFChoosePathVC.xib */; };
+		E78D1CA719BC6C3000D4F403 /* icons-09.png in Resources */ = {isa = PBXBuildFile; fileRef = E78D1C9E19BC6C3000D4F403 /* icons-09.png */; };
+		E78D1CA819BC6C3000D4F403 /* icons-10.png in Resources */ = {isa = PBXBuildFile; fileRef = E78D1C9F19BC6C3000D4F403 /* icons-10.png */; };
+		E78D1CA919BC6C3000D4F403 /* icons-11.png in Resources */ = {isa = PBXBuildFile; fileRef = E78D1CA019BC6C3000D4F403 /* icons-11.png */; };
+		E78D1CAA19BC6C3000D4F403 /* icons-12.png in Resources */ = {isa = PBXBuildFile; fileRef = E78D1CA119BC6C3000D4F403 /* icons-12.png */; };
+		E78D1CAB19BC6C3000D4F403 /* icons-13.png in Resources */ = {isa = PBXBuildFile; fileRef = E78D1CA219BC6C3000D4F403 /* icons-13.png */; };
+		E78D1CAC19BC6C3000D4F403 /* icons-14.png in Resources */ = {isa = PBXBuildFile; fileRef = E78D1CA319BC6C3000D4F403 /* icons-14.png */; };
+		E78D1CAD19BC6C3000D4F403 /* icons-15.png in Resources */ = {isa = PBXBuildFile; fileRef = E78D1CA419BC6C3000D4F403 /* icons-15.png */; };
+		E78D1CAE19BC6C3000D4F403 /* icons-16.png in Resources */ = {isa = PBXBuildFile; fileRef = E78D1CA519BC6C3000D4F403 /* icons-16.png */; };
+		E78D1CAF19BC6C3000D4F403 /* icons-17.png in Resources */ = {isa = PBXBuildFile; fileRef = E78D1CA619BC6C3000D4F403 /* icons-17.png */; };
+		E78D1CB119BC755C00D4F403 /* JFMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78D1CB019BC755C00D4F403 /* JFMapViewController.xib */; };
 		E795B46219BC174100FD1FD1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E795B46119BC174100FD1FD1 /* Parse.framework */; };
 		E795B48519BC17F000FD1FD1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E795B48419BC17F000FD1FD1 /* Social.framework */; };
 		E7A0854F19BBBFB200C42245 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0854E19BBBFB200C42245 /* Foundation.framework */; };
@@ -65,14 +77,6 @@
 /* Begin PBXFileReference section */
 		3E7EF4A732A742B1B93E0744 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		5E80B1A0C0184524B90CE439 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A7BA21919BBCF1E000DDD4B /* JFViewJamsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFViewJamsVC.h; sourceTree = "<group>"; };
-		7A7BA21A19BBCF1E000DDD4B /* JFViewJamsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFViewJamsVC.m; sourceTree = "<group>"; };
-		7A7BA21B19BBCF1E000DDD4B /* JFViewJamsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFViewJamsVC.xib; sourceTree = "<group>"; };
-		7A7BA21E19BBCF95000DDD4B /* JFJamsContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFJamsContainerViewController.h; sourceTree = "<group>"; };
-		7A7BA21F19BBCF95000DDD4B /* JFJamsContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFJamsContainerViewController.m; sourceTree = "<group>"; };
-		7A7BA22119BBD11C000DDD4B /* JFJamMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFJamMemberCell.h; sourceTree = "<group>"; };
-		7A7BA22219BBD11C000DDD4B /* JFJamMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFJamMemberCell.m; sourceTree = "<group>"; };
-		7A7BA22319BBD11C000DDD4B /* JFJamMemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFJamMemberCell.xib; sourceTree = "<group>"; };
 		7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E733E41A19BC323600B9961B /* JFSignUpLogInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFSignUpLogInVC.h; sourceTree = "<group>"; };
 		E733E41B19BC323600B9961B /* JFSignUpLogInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFSignUpLogInVC.m; sourceTree = "<group>"; };
@@ -89,6 +93,27 @@
 		E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMusician.m; sourceTree = "<group>"; };
 		E78D1C8719BC67D600D4F403 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = SOURCE_ROOT; };
 		E78D1C8819BC67D600D4F403 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = SOURCE_ROOT; };
+		E78D1C8A19BC6AD900D4F403 /* JFJamsContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFJamsContainerViewController.h; path = ../JFJamsContainerViewController.h; sourceTree = "<group>"; };
+		E78D1C8B19BC6AD900D4F403 /* JFJamsContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JFJamsContainerViewController.m; path = ../JFJamsContainerViewController.m; sourceTree = "<group>"; };
+		E78D1C8D19BC6AE800D4F403 /* JFJamMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFJamMemberCell.h; path = ../JFJamMemberCell.h; sourceTree = "<group>"; };
+		E78D1C8E19BC6AE800D4F403 /* JFJamMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JFJamMemberCell.m; path = ../JFJamMemberCell.m; sourceTree = "<group>"; };
+		E78D1C8F19BC6AE800D4F403 /* JFJamMemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JFJamMemberCell.xib; path = ../JFJamMemberCell.xib; sourceTree = "<group>"; };
+		E78D1C9219BC6AF500D4F403 /* JFViewJamsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFViewJamsVC.h; path = ../JFViewJamsVC.h; sourceTree = "<group>"; };
+		E78D1C9319BC6AF500D4F403 /* JFViewJamsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JFViewJamsVC.m; path = ../JFViewJamsVC.m; sourceTree = "<group>"; };
+		E78D1C9419BC6AF500D4F403 /* JFViewJamsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JFViewJamsVC.xib; path = ../JFViewJamsVC.xib; sourceTree = "<group>"; };
+		E78D1C9819BC6B3D00D4F403 /* JFChoosePathVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFChoosePathVC.h; sourceTree = "<group>"; };
+		E78D1C9919BC6B3D00D4F403 /* JFChoosePathVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFChoosePathVC.m; sourceTree = "<group>"; };
+		E78D1C9A19BC6B3D00D4F403 /* JFChoosePathVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFChoosePathVC.xib; sourceTree = "<group>"; };
+		E78D1C9E19BC6C3000D4F403 /* icons-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-09.png"; path = "../icons-09.png"; sourceTree = "<group>"; };
+		E78D1C9F19BC6C3000D4F403 /* icons-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-10.png"; path = "../icons-10.png"; sourceTree = "<group>"; };
+		E78D1CA019BC6C3000D4F403 /* icons-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-11.png"; path = "../icons-11.png"; sourceTree = "<group>"; };
+		E78D1CA119BC6C3000D4F403 /* icons-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-12.png"; path = "../icons-12.png"; sourceTree = "<group>"; };
+		E78D1CA219BC6C3000D4F403 /* icons-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-13.png"; path = "../icons-13.png"; sourceTree = "<group>"; };
+		E78D1CA319BC6C3000D4F403 /* icons-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-14.png"; path = "../icons-14.png"; sourceTree = "<group>"; };
+		E78D1CA419BC6C3000D4F403 /* icons-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-15.png"; path = "../icons-15.png"; sourceTree = "<group>"; };
+		E78D1CA519BC6C3000D4F403 /* icons-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-16.png"; path = "../icons-16.png"; sourceTree = "<group>"; };
+		E78D1CA619BC6C3000D4F403 /* icons-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-17.png"; path = "../icons-17.png"; sourceTree = "<group>"; };
+		E78D1CB019BC755C00D4F403 /* JFMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFMapViewController.xib; sourceTree = "<group>"; };
 		E795B46019BC173100FD1FD1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		E795B46119BC174100FD1FD1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Pods/Parse/Parse.framework; sourceTree = "<group>"; };
 		E795B46519BC175900FD1FD1 /* BFExecutor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFExecutor.h; sourceTree = "<group>"; };
@@ -269,6 +294,32 @@
 			name = "musician-user";
 			sourceTree = "<group>";
 		};
+		E78D1C9719BC6B2D00D4F403 /* front page */ = {
+			isa = PBXGroup;
+			children = (
+				E78D1C9819BC6B3D00D4F403 /* JFChoosePathVC.h */,
+				E78D1C9919BC6B3D00D4F403 /* JFChoosePathVC.m */,
+				E78D1C9A19BC6B3D00D4F403 /* JFChoosePathVC.xib */,
+			);
+			name = "front page";
+			sourceTree = "<group>";
+		};
+		E78D1C9D19BC6C2500D4F403 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E78D1C9E19BC6C3000D4F403 /* icons-09.png */,
+				E78D1C9F19BC6C3000D4F403 /* icons-10.png */,
+				E78D1CA019BC6C3000D4F403 /* icons-11.png */,
+				E78D1CA119BC6C3000D4F403 /* icons-12.png */,
+				E78D1CA219BC6C3000D4F403 /* icons-13.png */,
+				E78D1CA319BC6C3000D4F403 /* icons-14.png */,
+				E78D1CA419BC6C3000D4F403 /* icons-15.png */,
+				E78D1CA519BC6C3000D4F403 /* icons-16.png */,
+				E78D1CA619BC6C3000D4F403 /* icons-17.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		E795B45F19BC173100FD1FD1 /* Parse */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +433,7 @@
 		E7A0855419BBBFB200C42245 /* artistEco */ = {
 			isa = PBXGroup;
 			children = (
+				E78D1C9D19BC6C2500D4F403 /* images */,
 				E77A2B5219BC1FBC00AE8FD8 /* models */,
 				E7A0855D19BBBFB200C42245 /* JFAppDelegate.h */,
 				E7A0855E19BBBFB200C42245 /* JFAppDelegate.m */,
@@ -408,6 +460,7 @@
 		E7FDC78E19BC0D4E00080438 /* vcs */ = {
 			isa = PBXGroup;
 			children = (
+				E78D1C9719BC6B2D00D4F403 /* front page */,
 				E733E41F19BC37CF00B9961B /* create jam */,
 				E733E41919BC322400B9961B /* sign up */,
 				E7FDC79919BC0E4400080438 /* my tracks vc */,
@@ -430,9 +483,9 @@
 		E7FDC79019BC0D5F00080438 /* jam info */ = {
 			isa = PBXGroup;
 			children = (
-				7A7BA21919BBCF1E000DDD4B /* JFViewJamsVC.h */,
-				7A7BA21A19BBCF1E000DDD4B /* JFViewJamsVC.m */,
-				7A7BA21B19BBCF1E000DDD4B /* JFViewJamsVC.xib */,
+				E78D1C9219BC6AF500D4F403 /* JFViewJamsVC.h */,
+				E78D1C9319BC6AF500D4F403 /* JFViewJamsVC.m */,
+				E78D1C9419BC6AF500D4F403 /* JFViewJamsVC.xib */,
 			);
 			name = "jam info";
 			sourceTree = "<group>";
@@ -440,9 +493,9 @@
 		E7FDC79119BC0D6200080438 /* jam member */ = {
 			isa = PBXGroup;
 			children = (
-				7A7BA22119BBD11C000DDD4B /* JFJamMemberCell.h */,
-				7A7BA22219BBD11C000DDD4B /* JFJamMemberCell.m */,
-				7A7BA22319BBD11C000DDD4B /* JFJamMemberCell.xib */,
+				E78D1C8D19BC6AE800D4F403 /* JFJamMemberCell.h */,
+				E78D1C8E19BC6AE800D4F403 /* JFJamMemberCell.m */,
+				E78D1C8F19BC6AE800D4F403 /* JFJamMemberCell.xib */,
 			);
 			name = "jam member";
 			sourceTree = "<group>";
@@ -450,8 +503,9 @@
 		E7FDC79219BC0D6500080438 /* jam container */ = {
 			isa = PBXGroup;
 			children = (
-				7A7BA21E19BBCF95000DDD4B /* JFJamsContainerViewController.h */,
-				7A7BA21F19BBCF95000DDD4B /* JFJamsContainerViewController.m */,
+				E78D1CB019BC755C00D4F403 /* JFMapViewController.xib */,
+				E78D1C8A19BC6AD900D4F403 /* JFJamsContainerViewController.h */,
+				E78D1C8B19BC6AD900D4F403 /* JFJamsContainerViewController.m */,
 			);
 			name = "jam container";
 			sourceTree = "<group>";
@@ -555,16 +609,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78D1CAC19BC6C3000D4F403 /* icons-14.png in Resources */,
 				E7FDC79719BC0DB200080438 /* JFLoginWithSCVC.xib in Resources */,
+				E78D1CAD19BC6C3000D4F403 /* icons-15.png in Resources */,
 				E7A0856719BBBFB300C42245 /* Images.xcassets in Resources */,
+				E78D1C9119BC6AE800D4F403 /* JFJamMemberCell.xib in Resources */,
 				E7A0855919BBBFB200C42245 /* InfoPlist.strings in Resources */,
 				E733E42419BC391C00B9961B /* JFAddJamWhereVC.xib in Resources */,
-				7A7BA21D19BBCF1E000DDD4B /* JFViewJamsVC.xib in Resources */,
+				E78D1CAE19BC6C3000D4F403 /* icons-16.png in Resources */,
+				E78D1CA719BC6C3000D4F403 /* icons-09.png in Resources */,
 				E733E42B19BC393800B9961B /* JFAddJamWhenVC.xib in Resources */,
+				E78D1CA819BC6C3000D4F403 /* icons-10.png in Resources */,
 				E733E41E19BC323600B9961B /* JFSignUpLogInVC.xib in Resources */,
-				7A7BA22519BBD11C000DDD4B /* JFJamMemberCell.xib in Resources */,
 				E7A0856219BBBFB300C42245 /* Main.storyboard in Resources */,
+				E78D1CA919BC6C3000D4F403 /* icons-11.png in Resources */,
+				E78D1CAA19BC6C3000D4F403 /* icons-12.png in Resources */,
+				E78D1CAB19BC6C3000D4F403 /* icons-13.png in Resources */,
+				E78D1CAF19BC6C3000D4F403 /* icons-17.png in Resources */,
+				E78D1CB119BC755C00D4F403 /* JFMapViewController.xib in Resources */,
+				E78D1C9619BC6AF500D4F403 /* JFViewJamsVC.xib in Resources */,
 				E7FDC79E19BC0E5900080438 /* JFMySCTracksVC.xib in Resources */,
+				E78D1C9C19BC6B3D00D4F403 /* JFChoosePathVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,15 +680,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78D1C9019BC6AE800D4F403 /* JFJamMemberCell.m in Sources */,
 				E733E41D19BC323600B9961B /* JFSignUpLogInVC.m in Sources */,
 				E7FDC79D19BC0E5900080438 /* JFMySCTracksVC.m in Sources */,
+				E78D1C9519BC6AF500D4F403 /* JFViewJamsVC.m in Sources */,
+				E78D1C9B19BC6B3D00D4F403 /* JFChoosePathVC.m in Sources */,
 				E7A0855F19BBBFB200C42245 /* JFAppDelegate.m in Sources */,
 				E733E42A19BC393800B9961B /* JFAddJamWhenVC.m in Sources */,
 				E733E42319BC391C00B9961B /* JFAddJamWhereVC.m in Sources */,
 				E733E43219BC4BB700B9961B /* JFJamSession.m in Sources */,
-				7A7BA21C19BBCF1E000DDD4B /* JFViewJamsVC.m in Sources */,
-				7A7BA22019BBCF95000DDD4B /* JFJamsContainerViewController.m in Sources */,
-				7A7BA22419BBD11C000DDD4B /* JFJamMemberCell.m in Sources */,
+				E78D1C8C19BC6AD900D4F403 /* JFJamsContainerViewController.m in Sources */,
 				E78D1C8919BC67D600D4F403 /* AsyncImageView.m in Sources */,
 				E77A2B5619BC1FE800AE8FD8 /* JFMusician.m in Sources */,
 				E7A0855B19BBBFB200C42245 /* main.m in Sources */,

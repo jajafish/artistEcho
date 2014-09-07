@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface JFJamsContainerViewController : UIViewController <UIPageViewControllerDataSource>
 
 @property NSMutableArray *arrJams;
 @property (strong, nonatomic) UIPageViewController *pageController;
+@property NSMutableArray *annotations;
+@property IBOutlet MKMapView *mapView;
+@property BOOL jamViewExpanded; 
 
 @end

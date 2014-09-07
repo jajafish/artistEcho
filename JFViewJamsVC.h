@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface JFViewJamsVC : UIViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate, UIPageViewControllerDataSource>
+@interface JFViewJamsVC : UIViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property IBOutlet UITableView *tableView; 
 @property IBOutlet MKMapView *mapView;
-@property IBOutlet UILabel *lblLocation, *lblDate, *lblTime, *lblGenres;
+@property IBOutlet UILabel *lblLocation, *lblDate, *lblTime, *lblGenres, *lblMembers;
 @property NSMutableArray *arrJamMembers; 
 @property NSMutableDictionary *data; 
 @property NSUInteger indexNumber;
+@property NSMutableArray *annotations;
 
 @end
