@@ -13,7 +13,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *usernameField;
 @property (strong, nonatomic) IBOutlet UITextField *pass1Field;
 @property (strong, nonatomic) IBOutlet UITextField *pass2Field;
-@property (strong, nonatomic) JFJamSession *jamSessionToUpload;
 @property (strong, nonatomic) JFMusician *musicianToUpload;
 
 @end
@@ -34,29 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(jamSessionToAdd:) name:@"jamSessionInProgressNotification" object:nil];
-    
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(musicianToAdd:) name:@"musicianInProgressNotification" object:nil];
-    
-    NSLog(@"the user profile dictionary is %@", self.userProfileDictionary);
-    
-}
-
--(void)musicianToAdd: (NSNotification*)notif {
-    
-    NSLog(@"on login page, should add musician from notif center");
-    
-    self.musicianToUpload = (JFMusician *)[[notif userInfo]valueForKey:@"theMusicianBeingMade"];
-    
-    NSLog(@"on the signup page and the musician info is %@", self.musicianToUpload);
-    
-}
-
--(void)jamSessionToAdd:(NSNotification*)notif {
-    
-    NSLog(@"on the login page, should soon add the jam session from notif center");
-    self.jamSessionToUpload = (JFJamSession *)[[notif userInfo] valueForKey:@"theJamSessionBeingMade"];
-    NSLog(@"on the signup page and the jam session info is %@", self.jamSessionToUpload);
+    NSLog(@"from local sign up the user profile dictionary is %@", self.musicianInProgressProfile);
     
 }
 
@@ -72,11 +49,14 @@
         PFUser *thisUser = [PFUser user];
         thisUser.username = self.usernameField.text;
         thisUser.password = self.pass2Field.text;
-        thisUser[@"profile"] = self.userProfileDictionary;
+        thisUser[@"profile"] = self.musicianInProgressProfile;
+        [thisUser setObject:self.jamSessionInProgress forKey:@"jamSessionHosted"];
         [thisUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            
             NSLog(@"signed up the user");
         }];
+        JFJamSession *jamSessionHosted = [[JFJamSession alloc]init];
+        jamSessionHosted = self.jamSessionInProgress;
+        [jamSessionHosted saveInBackground];
     }
     
 }

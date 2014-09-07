@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JFJamSession.h"
 
 @interface JFSignUpLogInVC : UIViewController
 
 @property (strong, nonatomic) NSDictionary *userProfileDictionary;
 @property (strong, nonatomic) NSString *userSCTrackURI;
+@property (strong, nonatomic) NSMutableDictionary *musicianInProgressProfile;
+@property (strong, nonatomic) JFJamSession *jamSessionInProgress;
 
 @end

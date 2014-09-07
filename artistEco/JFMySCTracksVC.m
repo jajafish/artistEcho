@@ -83,9 +83,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     
     JFSignUpLogInVC *signUpVC = [[JFSignUpLogInVC alloc]init];
     signUpVC.userSCTrackURI = streamURL;
+    signUpVC.musicianInProgressProfile = self.musicianInProgressProfile;
+    signUpVC.jamSessionInProgress = self.jamSessionInProgress;
     
     [self presentViewController:signUpVC animated:YES completion:nil];
-    
     
     
 //    SCAccount *account = [SCSoundCloud account];
