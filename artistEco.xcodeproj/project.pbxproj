@@ -21,6 +21,7 @@
 		E733E42419BC391C00B9961B /* JFAddJamWhereVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E733E42219BC391C00B9961B /* JFAddJamWhereVC.xib */; };
 		E733E42A19BC393800B9961B /* JFAddJamWhenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E733E42819BC393800B9961B /* JFAddJamWhenVC.m */; };
 		E733E42B19BC393800B9961B /* JFAddJamWhenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E733E42919BC393800B9961B /* JFAddJamWhenVC.xib */; };
+		E733E42E19BC49C000B9961B /* SCLoginViewController+SCLoginPushVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E733E42D19BC49C000B9961B /* SCLoginViewController+SCLoginPushVC.m */; };
 		E77A2B5619BC1FE800AE8FD8 /* JFMusician.m in Sources */ = {isa = PBXBuildFile; fileRef = E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */; };
 		E795B46219BC174100FD1FD1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E795B46119BC174100FD1FD1 /* Parse.framework */; };
 		E795B48519BC17F000FD1FD1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E795B48419BC17F000FD1FD1 /* Social.framework */; };
@@ -84,6 +85,8 @@
 		E733E42719BC393800B9961B /* JFAddJamWhenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFAddJamWhenVC.h; sourceTree = "<group>"; };
 		E733E42819BC393800B9961B /* JFAddJamWhenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFAddJamWhenVC.m; sourceTree = "<group>"; };
 		E733E42919BC393800B9961B /* JFAddJamWhenVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFAddJamWhenVC.xib; sourceTree = "<group>"; };
+		E733E42C19BC49C000B9961B /* SCLoginViewController+SCLoginPushVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCLoginViewController+SCLoginPushVC.h"; sourceTree = "<group>"; };
+		E733E42D19BC49C000B9961B /* SCLoginViewController+SCLoginPushVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCLoginViewController+SCLoginPushVC.m"; sourceTree = "<group>"; };
 		E77A2B5419BC1FE800AE8FD8 /* JFMusician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMusician.h; sourceTree = "<group>"; };
 		E77A2B5519BC1FE800AE8FD8 /* JFMusician.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMusician.m; sourceTree = "<group>"; };
 		E795B46019BC173100FD1FD1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -449,6 +452,8 @@
 				E7FDC79319BC0DB200080438 /* JFLoginWithSCVC.h */,
 				E7FDC79419BC0DB200080438 /* JFLoginWithSCVC.m */,
 				E7FDC79519BC0DB200080438 /* JFLoginWithSCVC.xib */,
+				E733E42C19BC49C000B9961B /* SCLoginViewController+SCLoginPushVC.h */,
+				E733E42D19BC49C000B9961B /* SCLoginViewController+SCLoginPushVC.m */,
 			);
 			name = "login with sc";
 			sourceTree = "<group>";
@@ -614,6 +619,7 @@
 				E7A0855B19BBBFB200C42245 /* main.m in Sources */,
 				E7FDC79619BC0DB200080438 /* JFLoginWithSCVC.m in Sources */,
 				E7073D6A19BC0280006F3AF6 /* AsyncImageView.m in Sources */,
+				E733E42E19BC49C000B9961B /* SCLoginViewController+SCLoginPushVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
