@@ -8,8 +8,12 @@
 
 #import "JFViewJamsVC.h"
 #import "JFJamMemberCell.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface JFViewJamsVC ()
+
+@property (strong, nonatomic) AVAudioPlayer *player;
+@property (strong, nonatomic) UIWebView *SCWebView;
 
 @end
 
@@ -38,6 +42,10 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"JFJamMemberCell" bundle:nil] forCellReuseIdentifier:@"jamCell"];
     
+    NSLog(@"should be playing song");
+    [self playSoundFromSC];
+    [self createAndPlaySCFromWebView];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -62,6 +70,63 @@
     NSMutableDictionary *member = [self.arrJamMembers objectAtIndex:indexPath.row];
     [cell setValuesForKeysWithDictionary:member];
     return cell;
+}
+
+-(void)createAndPlaySCFromWebView
+{
+    
+    self.SCWebView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
+    self.SCWebView.scrollView.scrollEnabled = NO;
+    self.SCWebView.scrollView.bounces = NO;
+    
+    NSString *urlString = @"https://soundcloud.com/jahfish3/shredding";
+    
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc]init];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if ([data length])[self.SCWebView loadRequest:request];
+    }];
+
+    
+}
+
+-(void)playSoundFromSC
+{
+
+//    NSString *streamURL = @"https://soundcloud.com/jahfish3/shredding";
+//    SCAccount *account = [SCSoundCloud account];
+//    
+//    [SCRequest performMethod:SCRequestMethodGET
+//                  onResource:[NSURL URLWithString:streamURL]
+//             usingParameters:nil
+//                 withAccount:account
+//      sendingProgressHandler:nil
+//             responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+//                 NSError *playerError;
+//                 self.player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
+//                 [self.player prepareToPlay];
+//                 [self.player play];
+//             }];
+
+    
+    NSString *publicTrackUrlString = @"https://soundcloud.com/jahfish3/shredding";
+    NSString *urlString = [NSString stringWithFormat:@"%@?client_id=761ee8c9a61ac87e0a47e39ac682b5fa", publicTrackUrlString];
+    [SCRequest performMethod:SCRequestMethodGET
+                  onResource:[NSURL URLWithString:urlString]
+             usingParameters:nil
+                 withAccount:nil
+      sendingProgressHandler:nil
+             responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                 NSError *playerError;
+                 self.player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
+                 [self.player prepareToPlay];
+                 [self.player play];
+             }];
+    
 }
 
 -(IBAction)joinJam
