@@ -16,7 +16,7 @@
     //[Parse setApplicationId:@"aGteGk8MEwD1hXG8F2HkqNGxWSVIgDFf88VklyvZ"
     //              clientKey:@"JdzsCvjC6w22vnvMhdXsNHSXbjU49GjfFsn8cPCy"];
     
-    JFJamsContainerViewController *jf = [[JFJamsContainerViewController alloc] init];
+    JFJamsContainerViewController *jf = [[JFJamsContainerViewController alloc] initWithNibName:@"JFMapViewController" bundle:nil];
     self.window.rootViewController = jf;
     
     return YES;

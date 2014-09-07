@@ -1,5 +1,5 @@
 //
-//  JFJamPageViewController.h
+//  JFMapViewController.h
 //  artistEco
 //
 //  Created by Paul Sukhanov on 9/6/14.
@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface JFJamsContainerViewController : UIViewController <UIPageViewControllerDataSource>
+@interface JFMapViewController : UIViewController
 
-@property NSMutableArray *arrJams;
-@property (strong, nonatomic) UIPageViewController *pageController;
 @property NSMutableArray *annotations;
 @property IBOutlet MKMapView *mapView;
-@property BOOL jamViewExpanded; 
 
 @end
