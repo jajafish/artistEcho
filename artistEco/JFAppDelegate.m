@@ -7,13 +7,18 @@
 //
 
 #import "JFAppDelegate.h"
+#import "JFJamsContainerViewController.h"
 
 @implementation JFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Parse setApplicationId:@"aGteGk8MEwD1hXG8F2HkqNGxWSVIgDFf88VklyvZ"
-                  clientKey:@"JdzsCvjC6w22vnvMhdXsNHSXbjU49GjfFsn8cPCy"];
+    //[Parse setApplicationId:@"aGteGk8MEwD1hXG8F2HkqNGxWSVIgDFf88VklyvZ"
+    //              clientKey:@"JdzsCvjC6w22vnvMhdXsNHSXbjU49GjfFsn8cPCy"];
+    
+    JFJamsContainerViewController *jf = [[JFJamsContainerViewController alloc] init];
+    self.window.rootViewController = jf;
+    
     return YES;
 }
 							

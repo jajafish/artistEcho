@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A7BA21C19BBCF1E000DDD4B /* JFViewJamsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7BA21A19BBCF1E000DDD4B /* JFViewJamsVC.m */; };
+		7A7BA21D19BBCF1E000DDD4B /* JFViewJamsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7BA21B19BBCF1E000DDD4B /* JFViewJamsVC.xib */; };
+		7A7BA22019BBCF95000DDD4B /* JFJamsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7BA21F19BBCF95000DDD4B /* JFJamsContainerViewController.m */; };
+		7A7BA22419BBD11C000DDD4B /* JFJamMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7BA22219BBD11C000DDD4B /* JFJamMemberCell.m */; };
+		7A7BA22519BBD11C000DDD4B /* JFJamMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7BA22319BBD11C000DDD4B /* JFJamMemberCell.xib */; };
+		7A7BA22919BBD22B000DDD4B /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7BA22819BBD22B000DDD4B /* AsyncImageView.m */; };
+		7A7BA22B19BBF4E6000DDD4B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */; };
 		E7A0854F19BBBFB200C42245 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0854E19BBBFB200C42245 /* Foundation.framework */; };
 		E7A0855119BBBFB200C42245 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0855019BBBFB200C42245 /* CoreGraphics.framework */; };
 		E7A0855319BBBFB200C42245 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0855219BBBFB200C42245 /* UIKit.framework */; };
@@ -19,10 +26,7 @@
 		E7A0856E19BBBFB300C42245 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0856D19BBBFB300C42245 /* XCTest.framework */; };
 		E7A0856F19BBBFB300C42245 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0854E19BBBFB200C42245 /* Foundation.framework */; };
 		E7A0857019BBBFB300C42245 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0855219BBBFB200C42245 /* UIKit.framework */; };
-		E7A0857819BBBFB300C42245 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7A0857619BBBFB300C42245 /* InfoPlist.strings */; };
-		E7A0857A19BBBFB300C42245 /* artistEcoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A0857919BBBFB300C42245 /* artistEcoTests.m */; };
 		E7A0858519BBC00200C42245 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0858319BBC00200C42245 /* Bolts.framework */; };
-		E7A0858619BBC00200C42245 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0858419BBC00200C42245 /* Parse.framework */; };
 		E7A0858819BBC02000C42245 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0858719BBC02000C42245 /* AudioToolbox.framework */; };
 		E7A0858A19BBC02400C42245 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0858919BBC02400C42245 /* CFNetwork.framework */; };
 		E7A0858C19BBC02F00C42245 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0858B19BBC02F00C42245 /* CoreLocation.framework */; };
@@ -45,6 +49,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A7BA21919BBCF1E000DDD4B /* JFViewJamsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFViewJamsVC.h; sourceTree = "<group>"; };
+		7A7BA21A19BBCF1E000DDD4B /* JFViewJamsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFViewJamsVC.m; sourceTree = "<group>"; };
+		7A7BA21B19BBCF1E000DDD4B /* JFViewJamsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFViewJamsVC.xib; sourceTree = "<group>"; };
+		7A7BA21E19BBCF95000DDD4B /* JFJamsContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFJamsContainerViewController.h; sourceTree = "<group>"; };
+		7A7BA21F19BBCF95000DDD4B /* JFJamsContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFJamsContainerViewController.m; sourceTree = "<group>"; };
+		7A7BA22119BBD11C000DDD4B /* JFJamMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFJamMemberCell.h; sourceTree = "<group>"; };
+		7A7BA22219BBD11C000DDD4B /* JFJamMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFJamMemberCell.m; sourceTree = "<group>"; };
+		7A7BA22319BBD11C000DDD4B /* JFJamMemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFJamMemberCell.xib; sourceTree = "<group>"; };
+		7A7BA22719BBD22B000DDD4B /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
+		7A7BA22819BBD22B000DDD4B /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E7A0854B19BBBFB200C42245 /* artistEco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = artistEco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A0854E19BBBFB200C42245 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E7A0855019BBBFB200C42245 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,11 +76,7 @@
 		E7A0856619BBBFB300C42245 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E7A0856C19BBBFB300C42245 /* artistEcoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = artistEcoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A0856D19BBBFB300C42245 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		E7A0857519BBBFB300C42245 /* artistEcoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "artistEcoTests-Info.plist"; sourceTree = "<group>"; };
-		E7A0857719BBBFB300C42245 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E7A0857919BBBFB300C42245 /* artistEcoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = artistEcoTests.m; sourceTree = "<group>"; };
-		E7A0858319BBC00200C42245 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Bolts.framework; sourceTree = "<group>"; };
-		E7A0858419BBC00200C42245 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
+		E7A0858319BBC00200C42245 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		E7A0858719BBC02000C42245 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E7A0858919BBC02400C42245 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E7A0858B19BBC02F00C42245 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -82,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A7BA22B19BBF4E6000DDD4B /* MapKit.framework in Frameworks */,
 				E7A0859819BBC04C00C42245 /* SystemConfiguration.framework in Frameworks */,
 				E7A0859619BBC04700C42245 /* StoreKit.framework in Frameworks */,
 				E7A0859419BBC04300C42245 /* Security.framework in Frameworks */,
@@ -95,7 +107,6 @@
 				E7A0855319BBBFB200C42245 /* UIKit.framework in Frameworks */,
 				E7A0854F19BBBFB200C42245 /* Foundation.framework in Frameworks */,
 				E7A0858519BBC00200C42245 /* Bolts.framework in Frameworks */,
-				E7A0858619BBC00200C42245 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,11 +123,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A7BA22619BBD22B000DDD4B /* AsyncImageView */ = {
+			isa = PBXGroup;
+			children = (
+				7A7BA22719BBD22B000DDD4B /* AsyncImageView.h */,
+				7A7BA22819BBD22B000DDD4B /* AsyncImageView.m */,
+			);
+			name = AsyncImageView;
+			path = "../../shared/PSHandy/AsyncImageView-master/AsyncImageView";
+			sourceTree = "<group>";
+		};
 		E7A0854219BBBFB200C42245 = {
 			isa = PBXGroup;
 			children = (
 				E7A0855419BBBFB200C42245 /* artistEco */,
-				E7A0857319BBBFB300C42245 /* artistEcoTests */,
 				E7A0854D19BBBFB200C42245 /* Frameworks */,
 				E7A0854C19BBBFB200C42245 /* Products */,
 			);
@@ -134,6 +154,8 @@
 		E7A0854D19BBBFB200C42245 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A7BA22A19BBF4E5000DDD4B /* MapKit.framework */,
+				E7A0858319BBC00200C42245 /* Bolts.framework */,
 				E7A0859719BBC04C00C42245 /* SystemConfiguration.framework */,
 				E7A0859519BBC04700C42245 /* StoreKit.framework */,
 				E7A0859319BBC04300C42245 /* Security.framework */,
@@ -154,13 +176,20 @@
 		E7A0855419BBBFB200C42245 /* artistEco */ = {
 			isa = PBXGroup;
 			children = (
-				E7A0858319BBC00200C42245 /* Bolts.framework */,
-				E7A0858419BBC00200C42245 /* Parse.framework */,
 				E7A0855D19BBBFB200C42245 /* JFAppDelegate.h */,
 				E7A0855E19BBBFB200C42245 /* JFAppDelegate.m */,
+				7A7BA22619BBD22B000DDD4B /* AsyncImageView */,
 				E7A0856019BBBFB200C42245 /* Main.storyboard */,
 				E7A0856319BBBFB300C42245 /* JFViewController.h */,
 				E7A0856419BBBFB300C42245 /* JFViewController.m */,
+				7A7BA21E19BBCF95000DDD4B /* JFJamsContainerViewController.h */,
+				7A7BA21F19BBCF95000DDD4B /* JFJamsContainerViewController.m */,
+				7A7BA21919BBCF1E000DDD4B /* JFViewJamsVC.h */,
+				7A7BA21A19BBCF1E000DDD4B /* JFViewJamsVC.m */,
+				7A7BA21B19BBCF1E000DDD4B /* JFViewJamsVC.xib */,
+				7A7BA22119BBD11C000DDD4B /* JFJamMemberCell.h */,
+				7A7BA22219BBD11C000DDD4B /* JFJamMemberCell.m */,
+				7A7BA22319BBD11C000DDD4B /* JFJamMemberCell.xib */,
 				E7A0856619BBBFB300C42245 /* Images.xcassets */,
 				E7A0855519BBBFB200C42245 /* Supporting Files */,
 			);
@@ -174,24 +203,6 @@
 				E7A0855719BBBFB200C42245 /* InfoPlist.strings */,
 				E7A0855A19BBBFB200C42245 /* main.m */,
 				E7A0855C19BBBFB200C42245 /* artistEco-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E7A0857319BBBFB300C42245 /* artistEcoTests */ = {
-			isa = PBXGroup;
-			children = (
-				E7A0857919BBBFB300C42245 /* artistEcoTests.m */,
-				E7A0857419BBBFB300C42245 /* Supporting Files */,
-			);
-			path = artistEcoTests;
-			sourceTree = "<group>";
-		};
-		E7A0857419BBBFB300C42245 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E7A0857519BBBFB300C42245 /* artistEcoTests-Info.plist */,
-				E7A0857619BBBFB300C42245 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -275,6 +286,8 @@
 			files = (
 				E7A0856719BBBFB300C42245 /* Images.xcassets in Resources */,
 				E7A0855919BBBFB200C42245 /* InfoPlist.strings in Resources */,
+				7A7BA21D19BBCF1E000DDD4B /* JFViewJamsVC.xib in Resources */,
+				7A7BA22519BBD11C000DDD4B /* JFJamMemberCell.xib in Resources */,
 				E7A0856219BBBFB300C42245 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +296,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7A0857819BBBFB300C42245 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A0855F19BBBFB200C42245 /* JFAppDelegate.m in Sources */,
+				7A7BA21C19BBCF1E000DDD4B /* JFViewJamsVC.m in Sources */,
 				E7A0856519BBBFB300C42245 /* JFViewController.m in Sources */,
+				7A7BA22019BBCF95000DDD4B /* JFJamsContainerViewController.m in Sources */,
+				7A7BA22419BBD11C000DDD4B /* JFJamMemberCell.m in Sources */,
 				E7A0855B19BBBFB200C42245 /* main.m in Sources */,
+				7A7BA22919BBD22B000DDD4B /* AsyncImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +320,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7A0857A19BBBFB300C42245 /* artistEcoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,14 +348,6 @@
 				E7A0856119BBBFB300C42245 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E7A0857619BBBFB300C42245 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7A0857719BBBFB300C42245 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -423,11 +430,20 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "artistEco/artistEco-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"/Applications/Xcode6-Beta5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(PROJECT_DIR)/**",
+				);
 				INFOPLIST_FILE = "artistEco/artistEco-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -440,11 +456,20 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "artistEco/artistEco-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"/Applications/Xcode6-Beta5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(PROJECT_DIR)/**",
+				);
 				INFOPLIST_FILE = "artistEco/artistEco-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -509,6 +534,7 @@
 				E7A0857F19BBBFB300C42245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7A0858019BBBFB300C42245 /* Build configuration list for PBXNativeTarget "artistEcoTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +543,7 @@
 				E7A0858219BBBFB300C42245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

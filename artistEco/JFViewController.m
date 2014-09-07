@@ -17,9 +17,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];}
+    //PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    //testObject[@"foo"] = @"bar";
+    //[testObject saveInBackground];
+}
 
 - (void)didReceiveMemoryWarning
 {
