@@ -67,7 +67,7 @@
                     <color key="backgroundColor" red="0.84705882352941175" green="0.85882352941176465" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" pagingEnabled="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Nb1-AX-bfq">
-                    <rect key="frame" x="0.0" y="126" width="320" height="344"/>
+                    <rect key="frame" x="0.0" y="130" width="320" height="340"/>
                     <color key="backgroundColor" red="0.84705882349999995" green="0.85882352939999995" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.84705882349999995" green="0.85882352939999995" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>

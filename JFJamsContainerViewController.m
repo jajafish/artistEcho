@@ -79,6 +79,11 @@
         if (!error){
             NSLog(@"success there are %lu jams", (unsigned long)objects.count);
             self.jamsViaParse = [objects mutableCopy];
+            
+//            for (JFJamSession *jam in objects){
+//                NSString *objectID = jam.objectId;
+//            }
+            
             NSLog(@"here are all the jam sessions via parse: %@", self.jamsViaParse);
             
             JFViewJamsVC *viewControllerObject = [self viewControllerAtIndex:0];
@@ -115,7 +120,7 @@
         pinView.annotation = annotation;
     }
     return pinView;
-}
+}z
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
@@ -124,8 +129,15 @@
         //you have to calculate how to get the map point annotation in the middle of the box in the top of the screen, by setting the center coordinate
         
         CLLocationCoordinate2D currentCoord = [view.annotation coordinate];
+        [mapView setCenterCoordinate:currentCoord];
+        //CLLocationCoordinate2D newCenter = currentCoord;
+        //newCenter.longitude = newCenter.latitude - 0.1;
+        
+        CGPoint fakecenter = CGPointMake(160, 550);
+        CLLocationCoordinate2D coordinate = [mapView convertPoint:fakecenter toCoordinateFromView:mapView];
+        [mapView setCenterCoordinate:coordinate animated:YES];
         //CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(<#CLLocationDegrees latitude#>, <#CLLocationDegrees longitude#>)
-        //[self.mapView setCenterCoordinate:<#(CLLocationCoordinate2D)#> animated:<#(BOOL)#>]
+        //[self.mapView setCenterCoordinate:newCenter animated:YES];
         
         NSLog(@"annotation selected:%@",view);
         [UIView animateWithDuration:0.4 animations:^{

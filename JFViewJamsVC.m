@@ -9,6 +9,7 @@
 #import "JFViewJamsVC.h"
 #import "JFJamMemberCell.h"
 #import "JFJamSession.h"
+#import "JFLoginWithSCVC.h"
 
 @interface JFViewJamsVC ()
 
@@ -90,16 +91,22 @@
 
 -(IBAction)joinJam
 {
-//    NSDictionary *jamSession = self.jamData;
-//    JFJamSession *jamSessionoObject = [[JFJamSession alloc]init];
-//    
-//    [jamSession enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-//        [jamSessionoObject setValue:obj forKey:key];
-//    }];
-//    
-//    [jamSessionoObject addObject:[PFUser currentUser] forKey:@"jamMembers"];
-//    [jamSessionoObject saveInBackground];
+    
+    JFJamSession *thisJamSession = [JFJamSession objectWithoutDataWithClassName:@"JFJamSession" objectId:[self.jamData objectForKey:@"objectId"]];
+    [thisJamSession addObject:[PFUser currentUser] forKey:@"jamMembers"];
+    [thisJamSession saveInBackground];
 }
+
+
+     
+     
+
+//-(void)addUserTojam
+//{
+//    
+//}
+
+        
 
 
 
