@@ -120,7 +120,7 @@
         pinView.annotation = annotation;
     }
     return pinView;
-}z
+}
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
